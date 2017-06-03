@@ -1,0 +1,26 @@
+.hamburger-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 2px;
+  background-color: inherit;
+
+  font-size: 0;
+  // transition: transform 0.15 ease;
+}
+
+.hamburger-box::before,
+.hamburger-box::after {
+  content: '';
+  display: block;
+}
+
+.hamburger-box::before {
+  top: 10px;
+}
+
+.hamburger-box::after {
+  top: -10px;
+}
+
