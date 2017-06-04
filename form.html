@@ -31,44 +31,50 @@
     <main class="form">
 
       <div class="form__description">
-        <h1 class="form__title">Вязание на заказ</h1>
+        <h1 class="form__main-title">Вязание на заказ</h1>
         <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       </div>
 
-      <form action="https://echo.htmlacademy.ru/" method="get">
+      <form class="form__items" action="https://echo.htmlacademy.ru/" method="get">
 
-        <div class="form__item">
+        <fieldset class="form__item">
           <legend class="form__title">Тип</legend>
-          <input type="radio" id="access" name="access" checked>
-          <label for="access">Аксессуар для  интерьера</label>
-          <input type="radio" id="toys" name="access">
-          <label for="toys">Детская игрушка</label>
-        </div>
+          <ul class="form__list">
+            <li class="form__list-item form__list-item--padding">
+              <input type="radio" id="access" name="access" checked>
+              <label for="access">Аксессуар для  интерьера</label>
+            </li>
+            <li class="form__list-item form__list-item--padding">
+              <input type="radio" id="toys" name="access">
+              <label for="toys">Детская игрушка</label>
+            </li>
+          </ul>
+        </fieldset>
 
         <fieldset class="form__item">
           <legend class="form__title">Цвет</legend>
           <ul class="form__list">
-            <li class="form__list-item">
+            <li class="form__list-item form__list-item--padding">
               <input type="checkbox" id="white" name="white" checked>
               <label for="white">Белый</label>
             </li>
-            <li class="form__list-item">
+            <li class="form__list-item form__list-item--padding">
               <input type="checkbox" id="grey" name="grey" checked>
               <label for="grey">Серый</label>
             </li>
-            <li class="form__list-item">
+            <li class="form__list-item form__list-item--padding">
               <input type="checkbox" id="tiffani" name="tiffani">
               <label for="tiffani">«Тиффани»</label>
             </li>
-            <li class="form__list-item">
+            <li class="form__list-item form__list-item--padding">
               <input type="checkbox" id="black" name="black">
               <label for="black">Черный</label>
             </li>
-            <li class="form__list-item">
+            <li class="form__list-item form__list-item--padding">
               <input type="checkbox" id="pink" name="pink">
               <label for="pink">Розовый</label>
             </li>
-            <li class="form__list-item">
+            <li class="form__list-item form__list-item--padding">
               <input type="checkbox" id="orange" name="orange">
               <label for="orange">Оранжевый</label>
             </li>
@@ -78,17 +84,17 @@
         <fieldset class="form__item">
           <legend class="form__title">ФИО</legend>
           <ul class="form__list">
-            <li class="form__list-item">
-              <input type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+            <li class="form__list-item form__list-item--input-underline">
               <label for="name">Имя:</label>
+              <input type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
             </li>
-            <li class="form__list-item">
-              <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+            <li class="form__list-item form__list-item--input-underline">
               <label for="surname">Фамилия:</label>
+              <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
             </li>
-            <li class="form__list-item">
-              <input type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+            <li class="form__list-item form__list-item--input-underline">
               <label for="patronymic">Отчество:</label>
+              <input type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
             </li>
           </ul>
         </fieldset>
@@ -96,11 +102,11 @@
         <fieldset class="form__item">
           <legend class="form__title">тел</legend>
           <ul class="form__list">
-            <li class="form__list-item">
+            <li class="form__list-item form__list-item--input-underline">
               <input type="tel" id="phone" name="phone" required>
               <label for="phone">+7 ХХХ ХХ ХХ*</label>
             </li>
-            <li class="form__list-item">
+            <li class="form__list-item form__list-item--input-underline">
               <input type="email" id="email" name="email" required>
               <label for="email">Ваш Email*</label>
             </li>
