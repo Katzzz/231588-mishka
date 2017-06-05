@@ -1,0 +1,86 @@
+// HEADER TOP
+
+.page-header__top {
+  border-bottom: 1px solid @grey--light;
+}
+
+.page-header__logo {
+  width: 260px;
+  padding: 30px;
+  text-align: center;
+}
+
+.page-header__menu {
+  position: relative;
+}
+
+.page-header__menu-list {
+  display: none;
+  flex-direction: column;
+  width: 260px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.page-header__menu-item {
+  display: block;
+  width: 260px;
+  padding: 30px;
+
+  font-size: 17px;
+  font-weight: 700;
+  color: inherit;
+
+  border-bottom: 1px solid @grey--light;
+}
+
+// HEADER MAIN
+.page-header__promo {
+  height: 283px;
+
+  background-image: url('../../img/hero-mobile@1x.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-header__promo p {
+  padding-top: 70px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin: 0;
+
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+}
+
+
+.page-header__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-header__list-item {
+  display: block;
+
+  padding: 25px 30px;
+
+  color: #fff;
+  font-size: 19px;
+  line-height: 24px;
+  &--room-design {
+    background-color: @base-color--lighten;
+    background-image: url(../img/icon-interior.svg);
+  }
+  &--toys {
+    background-color: @base-color--darken;
+    background-image: url(../img/icon-toy.svg);
+  }
+  background-position: right;
+  background-repeat: no-repeat;
+}
