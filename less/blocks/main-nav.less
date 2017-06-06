@@ -1,0 +1,95 @@
+
+// HAMBURGER
+
+.main-nav__hamburger-box {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 32px;
+  right: 30px;;
+  width: 21px;
+  height: 14px;
+
+  font-size: 0;
+}
+
+.main-nav--closed .main-nav__hamburger-box::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+
+  background-color: @black-lighten;
+  box-shadow: 0 5px 0 0 @black-lighten,
+              0 10px 0 0 @black-lighten;
+}
+
+ .main-nav--opened .main-nav__hamburger-box {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 20px;
+    height: 2px;
+
+    background-color: @black-lighten;
+  }
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media @tablet-widths {
+  .main-nav__hamburger-box {
+    display: none;
+  }
+}
+
+@media @desktop-widths {
+  .main-nav__hamburger-box {
+    display: none;
+  }
+}
+
+// MAIN NAVIGATION
+
+.main-nav {
+  display: block;
+}
+
+.main-nav__list-items,
+.main-nav__user-items {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.main-nav__list a {
+  display: block;
+  padding: 25px 30px;
+
+  font-size: 17px;
+  font-weight: 700;
+  color: inherit;
+}
+
+@media @tablet-widths {
+  .main-nav {
+    position: relative;
+  }
+  .main-nav__list li {
+    display: inline-block;
+  }
+  .main-nav__list-items {
+    position: absolute;
+    top: 110px;
+  }
+}
+

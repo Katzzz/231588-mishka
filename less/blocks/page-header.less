@@ -1,41 +1,28 @@
 // HEADER TOP
+.page-header__wrapper {
+  .container();
+}
 
 .page-header__top {
-  border-bottom: 1px solid @grey--light;
-}
-
-.page-header__logo {
-  width: 260px;
-  padding: 30px;
-  text-align: center;
-}
-
-.page-header__menu {
   position: relative;
 }
 
-.page-header__menu-list {
-  display: none;
-  flex-direction: column;
-  width: 260px;
-  padding: 0;
-
-  list-style: none;
+.page-header__logo {
+  height: 70px;
+  padding-top: 20px;
+  vertical-align: middle;
+  text-align: center;
 }
 
-.page-header__menu-item {
-  display: block;
-  width: 260px;
-  padding: 30px;
-
-  font-size: 17px;
-  font-weight: 700;
-  color: inherit;
-
-  border-bottom: 1px solid @grey--light;
+@media @tablet-widths {
+  .page-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 // HEADER MAIN
+// PROMO
 .page-header__promo {
   height: 283px;
 
@@ -56,10 +43,7 @@
   text-align: center;
 }
 
-
 .page-header__list {
-  display: flex;
-  flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
