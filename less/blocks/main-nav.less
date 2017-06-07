@@ -71,25 +71,131 @@
   list-style: none;
 }
 
-.main-nav__list a {
+.main-nav a {
   display: block;
   padding: 25px 30px;
+  padding-left: 47px;
+  height: 100%;
 
   font-size: 17px;
   font-weight: 700;
   color: inherit;
 }
 
+.main-nav__user-item {
+  &--search {
+    background-image: url('../../img/icon-search.svg');
+  }
+   &--cart {
+    background-image: url('../../img/icon-cart.svg');
+  }
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.main-nav__delivery,
+.main-nav__sales {
+  display: none;
+}
+
 @media @tablet-widths {
   .main-nav {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .main-nav__list li {
+
+  .main-nav li {
     display: inline-block;
+    vertical-align: middle;
   }
+
   .main-nav__list-items {
     position: absolute;
-    top: 110px;
+    top: 70px;
+    a{
+      padding-right: 15px;
+      padding-left: 0;
+
+      font-size: 15px;
+    }
+  }
+
+  .main-nav__user-items li:first-child a {
+    padding: 0;
+    text-indent: -9999px;
+  }
+
+  .main-nav__user-items li:last-child a {
+    padding-right: 0;
+  }
+
+  .main-nav__delivery {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    a{
+      padding-right: 0;
+      padding-left: 0;
+
+      color: @grey;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+  .main-nav__sales {
+    display: none;
   }
 }
 
+@media @desktop-widths {
+  .main-nav {
+    display: flex;
+  }
+  .main-nav__list-items {
+    position: static;
+
+    a {
+      padding-right: 15px;
+      font-size: 17px;
+    }
+    & li:last-child a {
+      padding-left: 45px;
+    }
+  }
+
+  .main-nav__user-items {
+    order: 2;
+  }
+
+  .main-nav__delivery {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    a{
+      padding-right: 0;
+      padding-left: 0;
+
+      color: @grey;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+  .main-nav__sales {
+    display: block;
+    position: absolute;
+    top: 70px;
+    a{
+      padding-right: 15px;
+      padding-left: 0;
+
+      font-size: 15px;
+    }
+    & li:last-child a {
+      padding-left: 37px;
+    }
+  }
+}
