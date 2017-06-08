@@ -1,13 +1,12 @@
 .features {
-  width: 260px;
-  padding: 0 30px;
+  .container();
 }
 
 .features__list {
+  display: flex;
+  flex-direction: column;
   padding-top: 30px;
-  padding-left: 0;
-  list-style: none;
-
+  .no-list-style();
 }
 
 .features__item {
@@ -39,4 +38,21 @@
 
   background-repeat: no-repeat;
   background-position: top left;
+}
+
+@media @tablet-widths {
+  .features__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  li {
+    width: 304px;
+  }
+}
+
+@media @desktop-widths {
+  .features__wrapper {
+    padding-left: 175px;
+  }
 }

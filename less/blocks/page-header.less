@@ -44,7 +44,6 @@
 }
 
 .page-header__list {
-  .container();
   display: flex;
   flex-direction: column;
   .no-list-style();
@@ -83,9 +82,12 @@
     background-color: @bg-color--promo;
   }
   .page-header__list {
+    .container();
     flex-direction: row;
     li {
     flex-grow: 1;
     }
   }
 }
+
+

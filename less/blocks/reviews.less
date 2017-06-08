@@ -1,6 +1,5 @@
 .reviews {
-  width: 260px;
-  padding: 0 30px;
+  .container();
 }
 
 .reviews__description {
@@ -14,4 +13,38 @@
 
 .reviews__instagram {
   color: @grey--light;
+}
+
+@media @tablet-widths {
+  .reviews {
+    height: 457px;
+    position: relative;
+
+    background-image: url(../../img/review@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+  .reviews__item {
+    p {
+    padding-bottom: 60px;
+    }
+  }
+  .reviews__description {
+    span {
+      display: block;
+    }
+  }
+  .reviews__instagram {
+    color: @grey;
+  }
+  .reviews__btn {
+    position: absolute;
+    top: 65px;
+    right: 50px;
+  }
+}
+@media @desktop-widths {
+  .reviews-wrapper {
+    padding-left: 175px;
+  }
 }
