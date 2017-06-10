@@ -51,89 +51,101 @@
       <form class="form__items" action="https://echo.htmlacademy.ru/" method="get">
 
         <fieldset class="form__item">
-          <legend class="form__title">Тип</legend>
-          <ul class="form__list">
-            <li class="form__list-item form__list-item--padding">
-              <input type="radio" id="access" name="access" checked>
-              <label for="access">Аксессуар для  интерьера</label>
-            </li>
-            <li class="form__list-item form__list-item--padding">
-              <input type="radio" id="toys" name="access">
-              <label for="toys">Детская игрушка</label>
-            </li>
-          </ul>
+          <div class="form__item-wrapper">
+            <legend class="form__title">Тип</legend>
+            <ul class="form__list">
+              <li class="form__list-item form__list-item--padding">
+                <input type="radio" id="access" name="access" checked>
+                <label for="access">Аксессуар для  интерьера</label>
+              </li>
+              <li class="form__list-item form__list-item--padding">
+                <input type="radio" id="toys" name="access">
+                <label for="toys">Детская игрушка</label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
 
         <fieldset class="form__item">
-          <legend class="form__title">Цвет</legend>
-          <ul class="form__list">
-            <li class="form__list-item form__list-item--padding">
-              <input type="checkbox" id="white" name="white" checked>
-              <label for="white">Белый</label>
-            </li>
-            <li class="form__list-item form__list-item--padding">
-              <input type="checkbox" id="grey" name="grey" checked>
-              <label for="grey">Серый</label>
-            </li>
-            <li class="form__list-item form__list-item--padding">
-              <input type="checkbox" id="tiffani" name="tiffani">
-              <label for="tiffani">«Тиффани»</label>
-            </li>
-            <li class="form__list-item form__list-item--padding">
-              <input type="checkbox" id="black" name="black">
-              <label for="black">Черный</label>
-            </li>
-            <li class="form__list-item form__list-item--padding">
-              <input type="checkbox" id="pink" name="pink">
-              <label for="pink">Розовый</label>
-            </li>
-            <li class="form__list-item form__list-item--padding">
-              <input type="checkbox" id="orange" name="orange">
-              <label for="orange">Оранжевый</label>
-            </li>
-          </ul>
+          <div class="form__item-wrapper">
+            <legend class="form__title">Цвет</legend>
+            <ul class="form__list form__list-color">
+              <li class="form__list-item form__list-item--padding">
+                <input type="checkbox" id="white" name="white" checked>
+                <label for="white">Белый</label>
+              </li>
+              <li class="form__list-item form__list-item--padding">
+                <input type="checkbox" id="grey" name="grey" checked>
+                <label for="grey">Серый</label>
+              </li>
+              <li class="form__list-item form__list-item--padding">
+                <input type="checkbox" id="tiffani" name="tiffani">
+                <label for="tiffani">«Тиффани»</label>
+              </li>
+              <li class="form__list-item form__list-item--padding">
+                <input type="checkbox" id="black" name="black">
+                <label for="black">Черный</label>
+              </li>
+              <li class="form__list-item form__list-item--padding">
+                <input type="checkbox" id="pink" name="pink">
+                <label for="pink">Розовый</label>
+              </li>
+              <li class="form__list-item form__list-item--padding">
+                <input type="checkbox" id="orange" name="orange">
+                <label for="orange">Оранжевый</label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
 
         <fieldset class="form__item">
-          <legend class="form__title">ФИО</legend>
-          <ul class="form__list">
-            <li class="form__list-item form__list-item--input-underline">
-              <label for="name">Имя:</label>
-              <input type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
-            </li>
-            <li class="form__list-item form__list-item--input-underline">
-              <label for="surname">Фамилия:</label>
-              <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
-            </li>
-            <li class="form__list-item form__list-item--input-underline">
-              <label for="patronymic">Отчество:</label>
-              <input type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
-            </li>
-          </ul>
+          <div class="form__item-wrapper">
+            <legend class="form__title">ФИО</legend>
+            <ul class="form__list">
+              <li class="form__list-item form__list-item--input-underline form__list-item--inline">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+              </li>
+              <li class="form__list-item form__list-item--input-underline form__list-item--inline">
+                <label for="surname">Фамилия:</label>
+                <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+              </li>
+              <li class="form__list-item form__list-item--input-underline form__list-item--inline">
+                <label for="patronymic">Отчество:</label>
+                <input type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+              </li>
+            </ul>
+          </div>
         </fieldset>
 
         <fieldset class="form__item">
-          <legend class="form__title">тел</legend>
-          <ul class="form__list">
-            <li class="form__list-item form__list-item--input-underline">
-              <input type="tel" id="phone" name="phone" required>
-              <label for="phone">+7 ХХХ ХХ ХХ*</label>
-            </li>
-            <li class="form__list-item form__list-item--input-underline">
-              <input type="email" id="email" name="email" required>
-              <label for="email">Ваш Email*</label>
-            </li>
-          </ul>
+          <div class="form__item-wrapper">
+            <legend class="form__title">тел</legend>
+            <ul class="form__list">
+              <li class="form__list-item form__list-item--input-underline">
+                <input class="form__list-input form__list-input--phone" type="tel" id="phone" name="phone" required>
+                <label  class="form__label form__labe--phone" for="phone">+7 ХХХ ХХ ХХ*</label>
+              </li>
+              <li class="form__list-item form__list-item--input-underline">
+                <input class="form__list-input form__list-input--email" type="email" id="email" name="email" required>
+                <label class="form__label" for="email">Ваш Email*</label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
 
         <fieldset class="form__item">
-          <legend class="form__title">Доп</legend>
-          <textarea id="comment" name="comment"></textarea>
-          <label for="comment">Опишите все ваши  пожелания к заказу</label>
+          <div class="form__item-wrapper">
+            <legend class="form__title">Доп</legend>
+            <textarea class="form__textarea" id="comment" name="comment">Опишите все ваши  пожелания к заказу</textarea>
+            <label class="form__textarea-label" for="comment">Опишите все ваши  пожелания к заказу</label>
+          </div>
         </fieldset>
 
-        <span class="form__comment">*Поля обязательны для заполнения</span>
-        <button type="submit" class="form__btn btn">Отправить заказ</button>
+        <div class="form__item-wrapper form__footer">
+          <span class="form__comment">*Поля обязательны для заполнения</span>
+          <button type="submit" class="form__btn btn">Отправить заказ</button>
+        </div>
 
       </form>
 
