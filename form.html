@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
@@ -13,17 +14,28 @@
     <header class="page-header">
 
       <div class="page-header__top">
-        <div class="page-header__logo logo">
-          <a href="index.html"><img src="img/logo-mobile.svg" alt="Мишка" height="40" width="95"></a>
-        </div>
-        <div class="page-header__menu">
-          <a href="#" class="hamburger-box">Меню</a>
-          <ul class="page-header__menu-list">
-            <li><a class="page-header__menu-item" href="catalog.html">Каталог товаров</a></li>
-            <li><a class="page-header__menu-item" href="#">Вязание на заказ</a></li>
-            <li><a class="page-header__menu-item" href="#">Поиск по сайту</a></li>
-            <li><a class="page-header__menu-item" href="#">Корзина: пока пуста</a></li>
-          </ul>
+        <div class="page-header__wrapper">
+          <nav class="main-nav main-nav--closed">
+            <div class="page-header__logo logo">
+              <a class="page-header__link" href="index.html"><img src="img/logo-mobile.svg" alt="Мишка" height="45" width="95"></a>
+            </div>
+            <button type="button" class="main-nav__hamburger-box">Меню</button>
+            <ul class="main-nav__list-items">
+              <li><a class="main-nav__list-item" href="catalog.html">Каталог товаров</a></li>
+              <li><a class="main-nav__list-item" href="form.html">Вязание на заказ</a></li>
+            </ul>
+            <ul class="main-nav__user-items">
+              <li><a class="main-nav__user-item main-nav__user-item--search" href="#">Поиск по сайту</a></li>
+              <li><a class="main-nav__user-item main-nav__user-item--cart" href="#">Корзина: пока пуста</a></li>
+            </ul>
+            <ul class="main-nav__delivery">
+              <li><a href="#">Бесплатная доставка по России</a></li>
+            </ul>
+            <ul class="main-nav__sales">
+              <li><a href="#">Новые поступления</a></li>
+              <li><a href="#">Распродажа</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
 
@@ -129,13 +141,18 @@
 
     <footer class="page-footer">
 
-      <div class="page-footer__social">
-        <a href="#" class="social-link social-link--instagram">Мы в Инстаграм</a>
-        <a href="#" class="social-link social-link--facebook">Мы в Фейсбук</a>
-        <a href="#" class="social-link social-link--twitter">Мы в Твиттер</a>
-      </div>
-      <div class="page-footer__copyright">Разработано
-        <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" height="34" width="30" alt="HTML Academy"></a>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo logo">
+            <img src="img/logo-mobile.svg" alt="Мишка" height="45" width="95">
+        </div>
+        <div class="page-footer__social">
+          <a href="#" class="social-link social-link--instagram">Мы в Инстаграм</a>
+          <a href="#" class="social-link social-link--facebook">Мы в Фейсбук</a>
+          <a href="#" class="social-link social-link--twitter">Мы в Твиттер</a>
+        </div>
+        <div class="page-footer__copyright">Разработано
+          <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" height="34" width="30" alt="HTML Academy"></a>
+        </div>
       </div>
 
     </footer>

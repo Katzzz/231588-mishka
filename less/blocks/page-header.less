@@ -14,9 +14,18 @@
   text-align: center;
 }
 
+@media @tablet-widths {
+  .page-header__link {
+      padding: 0;
+  }
+}
+
 @media @desktop-widths {
   .page-header__logo {
     order: 1;
+  }
+  .page-header__link {
+      padding: 0;
   }
 }
 
@@ -77,6 +86,10 @@
 @media @tablet-widths {
   .page-header__promo {
     height: 746px;
+    p {
+      font-size: 53px;
+      line-height: 57px;
+    }
   }
   .page-header__nav {
     background-color: @bg-color--promo;

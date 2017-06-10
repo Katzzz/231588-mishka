@@ -1,3 +1,13 @@
+.form__items {
+  .container();
+}
+
+.form__item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
 .form__main-title {
   padding: 75px 0;
   text-align: center;
@@ -9,12 +19,8 @@
   font-size: 13px;
 }
 
-.form__items {
-  width: 260px;
-  padding: 0 30px;
-}
-
 .form__title {
+  position: relative;
   padding-bottom: 25px;
 
   color: @base-color--lighten;
@@ -22,6 +28,16 @@
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50px;
+    width: 198px;
+    height: 1px;
+    background-color: @base-color--lighten;
+  }
+
 }
 
 .form__list {

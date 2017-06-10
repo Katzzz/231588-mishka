@@ -61,25 +61,24 @@
 
 .main-nav {
   display: block;
+  a {
+    display: block;
+    height: 100%;
+
+    font-size: 17px;
+    font-weight: 700;
+    color: inherit;
+  }
 }
 
 .main-nav__list-items,
 .main-nav__user-items {
-  padding: 0;
   margin: 0;
 
   list-style: none;
-}
-
-.main-nav a {
-  display: block;
-  padding: 25px 30px;
-  padding-left: 47px;
-  height: 100%;
-
-  font-size: 17px;
-  font-weight: 700;
-  color: inherit;
+  a {
+    padding: 25px 30px;
+  }
 }
 
 .main-nav__user-item {
@@ -113,8 +112,9 @@
 
   .main-nav__list-items {
     position: absolute;
-    top: 70px;
+    top: 100px;
     a{
+      padding: 0;
       padding-right: 15px;
       padding-left: 0;
 
@@ -122,21 +122,28 @@
     }
   }
 
-  .main-nav__user-items li:first-child a {
-    padding: 0;
-    text-indent: -9999px;
-  }
-
-  .main-nav__user-items li:last-child a {
-    padding-right: 0;
+  .main-nav__user-items {
+    li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    & li:first-child a {
+      padding: 0;
+      text-indent: -9999px;
+    }
+    & li:last-child a {
+      padding-right: 0;
+      padding-left: 85px;
+    }
   }
 
   .main-nav__delivery {
     display: block;
     position: absolute;
-    top: 70px;
+    top: 100px;
     right: 0;
     a{
+      padding: 0;
       padding-right: 0;
       padding-left: 0;
 
@@ -145,6 +152,7 @@
       font-weight: 400;
     }
   }
+
   .main-nav__sales {
     display: none;
   }
@@ -154,6 +162,7 @@
   .main-nav {
     display: flex;
   }
+
   .main-nav__list-items {
     position: static;
 
@@ -173,7 +182,7 @@
   .main-nav__delivery {
     display: block;
     position: absolute;
-    top: 70px;
+    top: 100px;
     right: 0;
     a{
       padding-right: 0;
@@ -187,7 +196,7 @@
   .main-nav__sales {
     display: block;
     position: absolute;
-    top: 70px;
+    top: 100px;
     a{
       padding-right: 15px;
       padding-left: 0;
