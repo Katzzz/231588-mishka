@@ -5,6 +5,7 @@
 .form__item {
   margin: 0;
   padding: 0;
+
   border: none;
 }
 
@@ -13,6 +14,7 @@
   margin: 0;
 
   text-align: center;
+
   border-bottom: 1px solid #c7c7c7;
   border-top: 1px solid #c7c7c7;
   background-color: @grey--lighten;
@@ -39,14 +41,16 @@
     left: 50px;
     width: 198px;
     height: 1px;
+
     background-color: @base-color--lighten;
   }
 }
 
 .form__list {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 .form__label {
@@ -65,18 +69,15 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
-
   input {
     width: 100%;
   }
-
   &--padding {
     padding-left: 62px;
   }
   &--padding input {
     display: none;
   }
-
   &--input-underline input {
     display: block;
     height: 45px;
@@ -84,15 +85,7 @@
     border: 0;
     border-bottom: 2px solid #000;
   }
-  &::-webkit-input-placeholder {
-    color: @grey--light;
-  }
-  &::-moz-placeholder {
-    color: @grey--light;
-  }
-  &::-ms-input-placeholder {
-    color: @grey--light;
-  }
+  .placeholder();
 }
 
 .form__list-input {
@@ -113,15 +106,7 @@
   border: 2px solid #000;
   resize: none;
 // not working placeholder
-  &::-webkit-input-placeholder {
-    color: @grey--light;
-  }
-  &::-moz-placeholder {
-    color: @grey--light;
-  }
-  &::-ms-input-placeholder {
-    color: @grey--light;
-  }
+  .placeholder();
 }
 
 .form__textarea-label {
@@ -168,7 +153,7 @@
   }
   .form__list,
   .form__textarea {
-    padding-left: 167px;
+    margin-left: 167px;
   }
   .form__title {
     &::after {
