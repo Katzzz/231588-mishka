@@ -1,50 +1,46 @@
 // HEADER TOP
+.page-header__wrapper {
+  .container();
+}
 
 .page-header__top {
-  border-bottom: 1px solid @grey--light;
-}
-
-.page-header__logo {
-  width: 260px;
-  padding: 30px;
-  text-align: center;
-}
-
-.page-header__menu {
   position: relative;
 }
 
-.page-header__menu-list {
-  display: none;
-  flex-direction: column;
-  width: 260px;
-  padding: 0;
+.page-header__logo {
+  height: 70px;
+  padding-top: 20px;
 
-  list-style: none;
+  vertical-align: middle;
+  text-align: center;
 }
 
-.page-header__menu-item {
-  display: block;
-  width: 260px;
-  padding: 30px;
+@media @tablet-widths {
+  .page-header__link {
+    padding: 0;
+  }
+}
 
-  font-size: 17px;
-  font-weight: 700;
-  color: inherit;
-
-  border-bottom: 1px solid @grey--light;
+@media @desktop-widths {
+  .page-header__logo {
+    order: 1;
+  }
+  .page-header__link {
+    padding: 0;
+  }
 }
 
 // HEADER MAIN
+// PROMO
 .page-header__promo {
-  height: 283px;
+  min-height: 283px;
 
+  background-color: @grey--lighten;
   background-image: url('../../img/hero-mobile@1x.jpg');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.page-header__promo p {
+  p {
   padding-top: 70px;
   padding-right: 30px;
   padding-left: 30px;
@@ -54,20 +50,20 @@
   font-weight: 700;
   line-height: 30px;
   text-align: center;
+  }
 }
-
 
 .page-header__list {
   display: flex;
   flex-direction: column;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  .no-list-style();
+  li {
+    flex-grow: 1;
+  }
 }
 
 .page-header__list-item {
   display: block;
-
   padding: 25px 30px;
 
   color: #fff;
@@ -76,11 +72,33 @@
   &--room-design {
     background-color: @base-color--lighten;
     background-image: url(../img/icon-interior.svg);
+    background-position: 90% center;
   }
   &--toys {
     background-color: @base-color--darken;
     background-image: url(../img/icon-toy.svg);
+    background-position: 93% center;
   }
   background-position: right;
   background-repeat: no-repeat;
+}
+
+@media @tablet-widths {
+  .page-header__promo {
+    height: 746px;
+    p {
+      font-size: 53px;
+      line-height: 57px;
+    }
+  }
+  .page-header__nav {
+    background-color: @bg-color--promo;
+  }
+  .page-header__list {
+    .container();
+    flex-direction: row;
+    li {
+    flex-grow: 1;
+    }
+  }
 }

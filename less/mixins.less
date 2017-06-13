@@ -1,12 +1,33 @@
 .container() {
-  width: 320px;
+  width: 260px;
   margin: 0 auto;
 
   @media @tablet-widths {
-    width: 640px;
+    width: 668px;
+    margin: 0 auto;
   }
 
   @media @desktop-widths {
-    width: 960px;
+    width: 1050px;
+    margin: 0 auto;
+  }
+}
+
+.no-list-style {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.placeholder {
+  &::-webkit-input-placeholder {
+    color: @grey--light;
+  }
+  &::-moz-placeholder {
+    color: @grey--light;
+  }
+  &::-ms-input-placeholder {
+    color: @grey--light;
   }
 }

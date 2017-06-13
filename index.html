@@ -2,9 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
   </head>
 
   <body>
@@ -12,17 +14,28 @@
     <header class="page-header">
 
       <div class="page-header__top">
-        <div class="page-header__logo logo">
-          <img src="img/logo-mobile.svg" alt="Мишка" height="45" width="95">
-        </div>
-        <div class="page-header__menu">
-          <a href="#" class="hamburger-box">Меню</a>
-          <ul class="page-header__menu-list">
-            <li><a class="page-header__menu-item" href="catalog.html">Каталог товаров</a></li>
-            <li><a class="page-header__menu-item" href="form.html">Вязание на заказ</a></li>
-            <li><a class="page-header__menu-item" href="#">Поиск по сайту</a></li>
-            <li><a class="page-header__menu-item" href="#">Корзина: пока пуста</a></li>
-          </ul>
+        <div class="page-header__wrapper">
+          <nav class="main-nav main-nav--closed">
+            <div class="page-header__logo logo">
+              <img src="img/logo-mobile.svg" alt="Мишка" height="45" width="95">
+            </div>
+            <button type="button" class="main-nav__hamburger-box">Меню</button>
+            <ul class="main-nav__list-items">
+              <li><a class="main-nav__list-item" href="catalog.html">Каталог товаров</a></li>
+              <li><a class="main-nav__list-item" href="form.html">Вязание на заказ</a></li>
+            </ul>
+            <ul class="main-nav__user-items">
+              <li><a class="main-nav__user-item main-nav__user-item--search" href="#">Поиск по сайту</a></li>
+              <li><a class="main-nav__user-item main-nav__user-item--cart" href="#">Корзина: пока пуста</a></li>
+            </ul>
+            <ul class="main-nav__delivery">
+              <li><a href="#">Бесплатная доставка по России</a></li>
+            </ul>
+            <ul class="main-nav__sales">
+              <li><a href="#">Новые поступления</a></li>
+              <li><a href="#">Распродажа</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
 
@@ -47,9 +60,9 @@
         <div class="goods__description">
           <h2 class="page-content__title">Вязаные корзинки</h2>
           <span class="goods__best-seller">Товар недели</span>
-          <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         </div>
         <div class="goods__features">
+          <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="goods__table">
             <tr class="goods__table-item">
               <td>Цвет:</td>
@@ -64,45 +77,50 @@
               <td>15 см</td>
             </tr>
           </table>
+          <div class="goods__thumb">
+            <img src="img/triple-set-mobile@1x.jpg" height="315" width="260" alt="Корзинки ручной работы">
+          </div>
+          <div class="goods__order">
+            <div class="goods__price">Цена: 990 руб.</div>
+            <a href="form.html" class="goods__btn btn">Заказать</a>
+          </div>
         </div>
-        <div class="goods__thumb">
-          <img src="img/triple-set-mobile@1x.jpg" height="315" width="260" alt="Корзинки ручной работы">
-        </div>
-        <div class="goods__price">Цена: 990 руб.</div>
-        <a href="form.html" class="goods__btn btn">Заказать</a>
 
       </section>
 
       <section class="features">
-
-        <h2 class="page-content__title">Коротко о нас:</h2>
-        <ul class="features__list">
-          <li class="features__item features__item--eco">Экологически чистые материалы</li>
-          <li class="features__item features__item--style">Скандинавский стиль по российской цене</li>
-          <li class="features__item features__item--likes">Увеличивает лайки на фотографиях</li>
-          <li class="features__item features__item--handmade">Связано вручную с любовью и умилением</li>
-          <li class="features__item features__item--support">Поддержка отечественного производителя</li>
-          <li class="features__item features__item--packed">Поставляется в подарочной упаковке</li>
-        </ul>
+        <div class="features__wrapper">
+          <h2 class="page-content__title">Коротко о нас:</h2>
+          <ul class="features__list">
+            <li class="features__item features__item--eco">Экологически чистые материалы</li>
+            <li class="features__item features__item--style">Скандинавский стиль по российской цене</li>
+            <li class="features__item features__item--likes">Увеличивает лайки на фотографиях</li>
+            <li class="features__item features__item--handmade">Связано вручную с любовью и умилением</li>
+            <li class="features__item features__item--support">Поддержка отечественного производителя</li>
+            <li class="features__item features__item--packed">Поставляется в подарочной упаковке</li>
+          </ul>
+        </div>
 
       </section>
 
       <section class="reviews">
 
-        <h2 class="page-content__title">Отзывы</h2>
-        <div class="reviews__item slider">
-          <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.
-            В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-          <div class="reviews__description">
-            <span class="reviews__author">Анастасия Красильникова</span>
-            <span class="reviews__instagram">@misssssiskras</span>
+        <div class="reviews-wrapper">
+          <h2 class="page-content__title">Отзывы</h2>
+          <div class="reviews__item slider">
+            <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.
+              В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <div class="reviews__description">
+              <span class="reviews__author">Анастасия Красильникова</span>
+              <span class="reviews__instagram">@misssssiskras</span>
+            </div>
           </div>
+          <div class="slider__toggles">
+            <a href="#" class="slider__toggle slider__toggle--left">Влево</a>
+            <a href="#" class="slider__toggle slider__toggle--right">Вправо</a>
+          </div>
+          <a href="#" class="reviews__btn btn">Написать</a>
         </div>
-        <div class="slider__toggles">
-          <a href="#" class="slider__toggle slider__toggle--left">Влево</a>
-          <a href="#" class="slider__toggle slider__toggle--right">Вправо</a>
-        </div>
-        <a href="#" class="reviews__btn btn">Написать</a>
 
       </section>
 
@@ -132,6 +150,9 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <div class="page-footer__logo logo">
+            <img src="img/logo-mobile.svg" alt="Мишка" height="45" width="95">
+        </div>
         <div class="page-footer__social">
           <a href="#" class="social-link social-link--instagram">Мы в Инстаграм</a>
           <a href="#" class="social-link social-link--facebook">Мы в Фейсбук</a>

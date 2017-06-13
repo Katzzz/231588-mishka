@@ -1,10 +1,5 @@
 .about-us__wrapper {
-  width: 260px;
-  padding: 0 30px;
-}
-
-.about-us__description {
-  padding-top: 40px;
+  .container();
 }
 
 .about-us__email-description,
@@ -15,12 +10,37 @@
 .about-us__description-item {
   display: flex;
   padding-bottom: 40px;
+
+  line-height: 30px;
 }
 
 .about-us__email {
   border-bottom: 1px solid @base-color--lighten;
 }
 
+.about-us__map {
+  span {
+    display: block;
+    padding: 30px 0;
+
+    text-align: center;
+  }
+}
+
 .about-us__btn {
-  margin: 0 30px;
+  width: 225px;
+  margin: 0 auto;
+}
+
+@media @tablet-widths {
+  .about-us__description {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .about-us__description-item {
+    width: 50%;
+
+    font-size: 17px;
+  }
 }
