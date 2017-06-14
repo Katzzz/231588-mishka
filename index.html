@@ -12,31 +12,28 @@
   <body>
 
     <header class="page-header">
-
       <div class="page-header__top">
-        <div class="page-header__wrapper">
-          <nav class="main-nav main-nav--closed">
-            <div class="page-header__logo logo">
-              <img src="img/logo-mobile.svg" alt="Мишка" height="45" width="95">
-            </div>
-            <button type="button" class="main-nav__hamburger-box">Меню</button>
-            <ul class="main-nav__list-items">
-              <li><a class="main-nav__list-item" href="catalog.html">Каталог товаров</a></li>
-              <li><a class="main-nav__list-item" href="form.html">Вязание на заказ</a></li>
-            </ul>
-            <ul class="main-nav__user-items">
-              <li><a class="main-nav__user-item main-nav__user-item--search" href="#">Поиск по сайту</a></li>
-              <li><a class="main-nav__user-item main-nav__user-item--cart" href="#">Корзина: пока пуста</a></li>
-            </ul>
-            <ul class="main-nav__delivery">
-              <li><a href="#">Бесплатная доставка по России</a></li>
-            </ul>
-            <ul class="main-nav__sales">
-              <li><a href="#">Новые поступления</a></li>
-              <li><a href="#">Распродажа</a></li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <div class="page-header__logo logo">
+            <img src="img/logo-mobile.svg" alt="Мишка" height="45" width="95">
+          </div>
+          <button type="button" class="main-nav__hamburger-box">Меню</button>
+          <ul class="main-nav__list-items">
+            <li><a class="main-nav__list-item" href="catalog.html">Каталог товаров</a></li>
+            <li><a class="main-nav__list-item" href="form.html">Вязание на заказ</a></li>
+          </ul>
+          <ul class="main-nav__user-items">
+            <li><a class="main-nav__user-item main-nav__user-item--search" href="#">Поиск по сайту</a></li>
+            <li><a class="main-nav__user-item main-nav__user-item--cart" href="#">Корзина: пока пуста</a></li>
+          </ul>
+          <ul class="main-nav__delivery">
+            <li><a href="#">Бесплатная доставка по России</a></li>
+          </ul>
+          <ul class="main-nav__sales">
+            <li><a href="#">Новые поступления</a></li>
+            <li><a href="#">Распродажа</a></li>
+          </ul>
+        </nav>
       </div>
 
       <div class="page-header__main">
@@ -45,8 +42,8 @@
         </div>
         <div class="page-header__nav">
           <ul class="page-header__list">
-            <li><a class="page-header__list-item page-header__list-item--room-design" href="#">Предметы интерьера</a></li>
-            <li><a class="page-header__list-item page-header__list-item--toys" href="#">Детские игрушки</a></li>
+            <li class="page-header__list-item page-header__list-item--room-design"><a href="#">Предметы интерьера</a></li>
+            <li class="page-header__list-item page-header__list-item--toys"><a href="#">Детские игрушки</a></li>
           </ul>
         </div>
       </div>
@@ -66,7 +63,7 @@
           <table class="goods__table">
             <tr class="goods__table-item">
               <td>Цвет:</td>
-              <td>Тиффани»/серый</td>
+              <td>&#171;Тиффани&#187;/серый</td>
             </tr>
             <tr class="goods__table-item">
               <td>Диаметр:</td>
@@ -125,7 +122,7 @@
       <section class="about-us">
 
         <div class="about-us__wrapper">
-          <h2 class="page-content__title">Контакты</h2>
+          <h2 class="about-us__title page-content__title">Контакты</h2>
           <div class="about-us__description">
             <div class="about-us__description-item">
               <span class="about-us__email-description">e-mail:</span>
@@ -138,7 +135,7 @@
           </div>
         </div>
         <div class="about-us__map">
-          <span>Здесь будет карта</span>
+          <img src="img/map-mobile@1x.jpg" height="457" width="320" alt="Карта">
         </div>
         <a href="#" class="about-us__btn btn">Напишите нам</a>
 
@@ -161,6 +158,8 @@
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript" src="./js/script.js"></script>
 
   </body>
 </html>

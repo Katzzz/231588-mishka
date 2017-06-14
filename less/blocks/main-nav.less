@@ -5,23 +5,27 @@
   content: '';
   position: absolute;
   display: block;
-  top: 32px;
-  right: 30px;;
-  width: 21px;
-  height: 14px;
+  top: 22px;
+  right: 22px;
+  width: 40px;
+  height: 40px;
 
   font-size: 0;
+
+  cursor: pointer;
 }
 
 .main-nav--closed .main-nav__hamburger-box::before {
   content: '';
   position: absolute;
+  top: 10px;
+  right: 10px;
   width: 20px;
   height: 2px;
 
   background-color: @black-lighten;
-  box-shadow: 0 5px 0 0 @black-lighten,
-              0 10px 0 0 @black-lighten;
+  box-shadow: 0 6px 0 0 @black-lighten,
+              0 12px 0 0 @black-lighten;
 }
 
 .main-nav--opened .main-nav__hamburger-box {
@@ -30,8 +34,10 @@
     content: "";
     position: absolute;
 
-    width: 20px;
+    width: 22px;
     height: 2px;
+    top: 16px;
+    left: 8px;
 
     background-color: @black-lighten;
   }
@@ -43,6 +49,10 @@
   &::after {
     transform: rotate(-45deg);
   }
+}
+
+.main-nav--nojs .main-nav__hamburger-box {
+  display: none;
 }
 
 @media @tablet-widths {
@@ -89,12 +99,59 @@
     background-image: url('../../img/icon-cart.svg');
   }
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: 10% center;
 }
 
 .main-nav__delivery,
 .main-nav__sales {
   display: none;
+}
+
+@media @mobile-widths-only {
+  .main-nav {
+    a {
+      padding-left: 77px;
+    }
+    li {
+      border-top: 1px solid @brown-light;
+    }
+  }
+  .main-nav--opened .main-nav__list-items {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+
+    background: #fff;
+  }
+  .main-nav--opened .main-nav__user-items {
+    position: absolute;
+    top: 230px;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+
+    background: #fff;
+  }
+  .main-nav--closed .main-nav__list-items {
+    display: none;
+  }
+  .main-nav--closed .main-nav__user-items {
+    display: none;
+  }
+  .main-nav--nojs .main-nav {
+    position: static;
+
+    height: auto;
+  }
+  .main-nav--nojs .main-nav__list-item,
+  .main-nav--nojs .main-nav__user-item {
+    display: block;
+  }
+  .main-nav__user-items li:last-child {
+  border-bottom: 1px solid @brown-light;
+}
 }
 
 @media @tablet-widths {

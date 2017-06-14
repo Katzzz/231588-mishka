@@ -1,5 +1,6 @@
 .reviews {
   .container();
+  margin-bottom: 50px;
 }
 
 .reviews__description {
@@ -13,6 +14,13 @@
 
 .reviews__instagram {
   color: @grey--light;
+}
+
+.reviews__item {
+  padding-top: 25px;
+  padding-bottom: 23px;
+
+  line-height: 30px;
 }
 
 @media @tablet-widths {
@@ -31,9 +39,7 @@
   .reviews__item {
     order: 2;
     flex-grow: 1;
-    p {
     padding-bottom: 60px;
-    }
   }
   .reviews__description {
     order: 3;

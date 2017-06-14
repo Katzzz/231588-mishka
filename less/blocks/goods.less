@@ -1,5 +1,6 @@
 .goods {
   .container();
+  margin-bottom: 43px;
 }
 
 .goods__best-seller {
@@ -11,22 +12,35 @@
 }
 
 .goods__price {
-  padding: 30px 0;
+  padding-top: 17px;
+  padding-bottom: 26px;
 
   color: @grey;
   text-align: center;
   font-size: 17px;
+  font-weight: 700;
 }
 
 .goods__features {
   p {
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
   }
 }
 
 .goods__table {
+  width: 100%;
   padding-bottom: 28px;
+  margin-bottom: 28px;
+
+  border-collapse: collapse;
+  tr {
+    border-bottom: 1px solid #ececec;
+  }
+  td {
+    padding: 8px 0;
+    padding-right: 29px;
+  }
 }
 
 @media @tablet-widths {
@@ -60,7 +74,6 @@
   }
   .goods__price {
     font-size: 20px;
-    font-weight: 700;
   }
   .goods__thumb {
     position: absolute;
