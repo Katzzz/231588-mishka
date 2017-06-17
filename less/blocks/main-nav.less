@@ -86,9 +86,11 @@
   margin: 0;
 
   list-style: none;
-  a {
-    padding: 25px 30px;
-  }
+}
+
+.main-nav__list-item,
+.main-nav__user-item {
+  padding: 25px 30px;
 }
 
 .main-nav__user-item {
@@ -110,7 +112,7 @@
 @media @mobile-widths-only {
   .main-nav {
     a {
-      padding-left: 77px;
+      padding-left: 75px;
     }
     li {
       border-top: 1px solid @brown-light;
@@ -160,44 +162,57 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    position: relative;
-    z-index: 2000;
-  }
-  .main-nav li {
-    display: inline-block;
-    vertical-align: middle;
+    & li {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
   .main-nav__list-items {
     order: 3;
-    top: 100px;
     a {
-      padding: 0;
-      padding-right: 15px;
-      padding-left: 0;
-
       font-size: 15px;
     }
   }
+  .main-nav__list-item {
+    padding: 0;
+    padding-right: 32px;
+    padding-left: 0;
+  }
   .main-nav__user-items {
     order: 2;
+    align-self: stretch;
+
+    padding-bottom: 17px;
     li {
       display: inline-block;
       vertical-align: middle;
     }
     & li:first-child a {
-      padding: 0;
+      padding-left: 23px;
+
       text-indent: -9999px;
     }
     & li:last-child a {
       padding-right: 0;
-      padding-left: 85px;
+      padding-left: 83px;
+    }
+  }
+  .main-nav__user-item {
+    padding: 0;
+    padding-top: 31px;
+    padding-bottom: 32px;
+
+    border-left: 1px solid @brown-light;
+    &--cart {
+      background-position: 13% center;
+    }
+    &--search {
+      background-position: 56% center;
     }
   }
   .main-nav__delivery {
     order: 4;
     display: block;
-    top: 100px;
-    right: 0;
     a {
       padding: 0;
       padding-right: 0;
@@ -219,13 +234,22 @@
   }
   .main-nav__list-items {
     order: 0;
+    align-self: stretch;
     a {
-      padding-right: 15px;
       font-size: 17px;
     }
     & li:last-child a {
-      padding-left: 45px;
+      padding-left: 31px;
     }
+    & li:first-child a {
+      padding-right: 37px;
+      border-right: 1px solid @brown-light;
+    }
+  }
+  .main-nav__list-item {
+    padding-top: 31px;
+    padding-bottom: 32px;
+
   }
   .main-nav__user-items {
     order: 2;
@@ -245,7 +269,7 @@
     display: block;
     order: 3;
     a {
-      padding-right: 15px;
+      padding-right: 23px;
       padding-left: 0;
 
       font-size: 15px;

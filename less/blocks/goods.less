@@ -12,8 +12,7 @@
 }
 
 .goods__price {
-  padding-top: 17px;
-  padding-bottom: 26px;
+  margin-bottom: 26px;
 
   color: @grey;
   text-align: center;
@@ -47,21 +46,25 @@
   .goods {
     position: relative;
     .container();
+    padding-bottom: 60px;
   }
   .goods__features {
-    width: 270px;
+    width: 290px;
+    margin-right: 45px;
+    p {
+      padding-top: 49px;
+      padding-bottom: 34px;
+
+      font-size: 17px;
+      line-height: 30px;
+    }
   }
   .goods__description {
     display: flex;
     justify-content: space-between;
-    padding-top: 60px;
+    padding-top: 48px;
     h2 {
       padding: 0;
-    }
-  }
-  .goods__features {
-    p {
-      font-size: 17px;
     }
   }
   .goods__best-seller {
@@ -69,7 +72,10 @@
     height: 40px;
     align-self: center;
     flex-shrink: 1;
+    padding-right: 24px;
+    padding-top: 10px;
 
+    line-height: 17px;
     text-align: center;
   }
   .goods__price {
@@ -77,8 +83,23 @@
   }
   .goods__thumb {
     position: absolute;
-    top: 140px;
+    top: 157px;
     right: 0;
+  }
+  .goods__table {
+    margin-bottom: 55px;
+    width: auto;
+    td {
+      padding-right: 28px;
+    }
+  }
+  .goods__table-item {
+    td:last-child {
+      padding-right: 60px;
+    }
+  }
+  .goods__price {
+    margin-bottom: 34px;
   }
 }
 

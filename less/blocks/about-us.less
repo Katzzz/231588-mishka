@@ -37,14 +37,39 @@
 }
 
 @media @tablet-widths {
+  .about-us__wrapper {
+    h2 {
+      padding-top: 70px;
+      padding-bottom: 23px;
+    }
+  }
+  .about-us__title {
+    background-image: url('../../img/icon-flag.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 90%;
+    background-size: 49px 82px;
+  }
   .about-us__description {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    padding-bottom: 53px;
   }
   .about-us__description-item {
     width: 50%;
 
     font-size: 17px;
+  }
+  .about-us__email-description,
+  .about-us__address-description {
+    padding-right: 25px;
+  }
+  .about-us__map {
+    padding-bottom: 15px;
+  }
+  .about-us__btn {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
