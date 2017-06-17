@@ -41,9 +41,6 @@
 }
 
 @media @tablet-widths {
-  .features {
-    margin-bottom: 32px;
-  }
   .features__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -63,7 +60,16 @@
 }
 
 @media @desktop-widths {
+  .features {
+    margin-bottom: 41px;
+  }
   .features__wrapper {
     padding-left: 175px;
+  }
+  .features__list {
+    justify-content: flex-start;
+  }
+  .features__item {
+    padding-right: 102px;
   }
 }
