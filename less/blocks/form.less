@@ -1,5 +1,6 @@
 .form__item-wrapper {
   .container();
+  margin-bottom: 18px;
 }
 
 .form__item {
@@ -10,24 +11,24 @@
 }
 
 .form__main-title {
-  padding: 75px 0;
+  padding: 69px 0;
+  padding-bottom: 76px;
   margin: 0;
 
   text-align: center;
 
-  border-bottom: 1px solid #c7c7c7;
-  border-top: 1px solid #c7c7c7;
+  border-top: 1px solid @brown-light;
   background-color: @grey--lighten;
 }
 
 .form__description p {
-  padding: 25px;
+  padding: 21px 30px;
+  padding-bottom: 25px;
   font-size: 13px;
 }
 
 .form__title {
   position: relative;
-  padding-bottom: 25px;
 
   color: @base-color--lighten;
   font-size: 17px;
@@ -37,9 +38,9 @@
   &::after {
     content: '';
     position: absolute;
-    top: 20%;
-    left: 50px;
-    width: 198px;
+    top: 8px;
+    left: 61px;
+    width: 199px;
     height: 1px;
 
     background-color: @base-color--lighten;
@@ -51,11 +52,24 @@
   padding: 0;
 
   list-style: none;
+  &--buttons {
+    padding-top: 35px;
+    padding-bottom: 3px;
+  }
+  &--surname {
+    padding-top: 30px;
+  }
+  &--phone {
+    padding-top: 13px;
+  }
+  &--email {
+    padding-top: 14px;
+  }
 }
 
 .form__label {
   position: absolute;
-  top: 10px;
+  top: 9px;
   left: 0;
 
   color: @grey--light;
@@ -64,7 +78,7 @@
 
 .form__list-item {
   position: relative;
-  padding-bottom: 25px;
+  padding-bottom: 23px;
 
   font-size: 17px;
   font-weight: 700;
@@ -72,18 +86,30 @@
   input {
     width: 100%;
   }
-  &--padding {
+  &--padding-left {
     padding-left: 62px;
   }
-  &--padding input {
+  &--padding-left input {
     display: none;
+  }
+  &--padding-bottom {
+    padding-bottom: 44px;
+  }
+  &--padding-bottom:last-child {
+    padding-bottom: 17px;
+  }
+  &--input-underline:last-child {
+    padding-bottom: 14px;
   }
   &--input-underline input {
     display: block;
-    height: 45px;
+    height: 49px;
 
     border: 0;
     border-bottom: 2px solid #000;
+  }
+  &--input-height input {
+    height: 43px;
   }
   .placeholder();
 }
@@ -96,12 +122,13 @@
     background-image: url('../../img/icon-mail.svg');
   }
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: 96% 5px;
 }
 
 .form__item textarea {
   width: 100%;
   height: 135px;
+  margin-top: 25px;
 
   border: 2px solid #000;
   resize: none;
@@ -119,14 +146,31 @@
   line-height: 16px;
 }
 
+.form__footer {
+  margin-top: -23px;
+  margin-bottom: 55px;
+}
+
 .form__btn {
   width: 100%;
   margin-top: 30px;
 }
 
 @media @tablet-widths {
+  .form__description {
+    position: relative;
+    margin-top: -42px;
+    p {
+      padding-top: 78px;
+      padding-right: 60px;
+      padding-left: 50px;
+
+      font-size: 17px;
+      line-height: 30px;
+    }
+  }
   .form__main-title {
-    padding-top: 100px;
+    padding-top: 92px;
 
     font-size: 43px;
     line-height: 50px;
@@ -140,13 +184,6 @@
     textarea {
       flex-grow: 1;
     }
-  }
-  .form__description p {
-    padding-top: 90px;
-    padding-left: 50px;
-
-    font-size: 17px;
-    line-height: 30px;
   }
   .form__item-wrapper {
     display: flex;
@@ -170,9 +207,24 @@
       padding-right: 25px;
     }
   }
-  .form__list-color {
-    display: flex;
-    flex-wrap: wrap;
+  .form__list {
+    &--flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &--buttons {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &--surname {
+      padding-top: 30px;
+    }
+    &--phone {
+      padding-top: 13px;
+    }
+    &--email {
+      padding-top: 14px;
+    }
     li {
       flex-basis: 30%;
     }

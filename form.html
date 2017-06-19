@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic-ext" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -52,13 +51,13 @@
 
         <fieldset class="form__item">
           <div class="form__item-wrapper">
-            <legend class="form__title">Тип</legend>
-            <ul class="form__list">
-              <li class="form__list-item form__list-item--padding">
+            <h2 class="form__title">Тип</h2>
+            <ul class="form__list form__list--buttons">
+              <li class="form__list-item form__list-item--padding-left">
                 <input type="radio" id="access" name="access" checked>
                 <label for="access">Аксессуар для  интерьера</label>
               </li>
-              <li class="form__list-item form__list-item--padding">
+              <li class="form__list-item form__list-item--padding-left">
                 <input type="radio" id="toys" name="access">
                 <label for="toys">Детская игрушка</label>
               </li>
@@ -68,29 +67,29 @@
 
         <fieldset class="form__item">
           <div class="form__item-wrapper">
-            <legend class="form__title">Цвет</legend>
-            <ul class="form__list form__list-color">
-              <li class="form__list-item form__list-item--padding">
+            <h2 class="form__title">Цвет</h2>
+            <ul class="form__list form__list--buttons form__list--flex">
+              <li class="form__list-item form__list-item--padding-left form__list-item--padding-bottom">
                 <input type="checkbox" id="white" name="white" checked>
                 <label for="white">Белый</label>
               </li>
-              <li class="form__list-item form__list-item--padding">
+              <li class="form__list-item form__list-item--padding-left form__list-item--padding-bottom">
                 <input type="checkbox" id="grey" name="grey" checked>
                 <label for="grey">Серый</label>
               </li>
-              <li class="form__list-item form__list-item--padding">
+              <li class="form__list-item form__list-item--padding-left form__list-item--padding-bottom">
                 <input type="checkbox" id="tiffani" name="tiffani">
                 <label for="tiffani">«Тиффани»</label>
               </li>
-              <li class="form__list-item form__list-item--padding">
+              <li class="form__list-item form__list-item--padding-left form__list-item--padding-bottom">
                 <input type="checkbox" id="black" name="black">
                 <label for="black">Черный</label>
               </li>
-              <li class="form__list-item form__list-item--padding">
+              <li class="form__list-item form__list-item--padding-left form__list-item--padding-bottom">
                 <input type="checkbox" id="pink" name="pink">
                 <label for="pink">Розовый</label>
               </li>
-              <li class="form__list-item form__list-item--padding">
+              <li class="form__list-item form__list-item--padding-left form__list-item--padding-bottom">
                 <input type="checkbox" id="orange" name="orange">
                 <label for="orange">Оранжевый</label>
               </li>
@@ -100,17 +99,17 @@
 
         <fieldset class="form__item">
           <div class="form__item-wrapper">
-            <legend class="form__title">ФИО</legend>
-            <ul class="form__list">
-              <li class="form__list-item form__list-item--input-underline form__list-item--inline">
+            <h2 class="form__title">ФИО</h2>
+            <ul class="form__list form__list--surname">
+              <li class="form__list-item form__list-item--input-underline">
                 <label for="name">Имя:</label>
                 <input type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
               </li>
-              <li class="form__list-item form__list-item--input-underline form__list-item--inline">
+              <li class="form__list-item form__list-item--input-underline">
                 <label for="surname">Фамилия:</label>
                 <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
               </li>
-              <li class="form__list-item form__list-item--input-underline form__list-item--inline">
+              <li class="form__list-item form__list-item--input-underline">
                 <label for="patronymic">Отчество:</label>
                 <input type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
               </li>
@@ -120,13 +119,21 @@
 
         <fieldset class="form__item">
           <div class="form__item-wrapper">
-            <legend class="form__title">тел</legend>
-            <ul class="form__list">
-              <li class="form__list-item form__list-item--input-underline">
+            <h2 class="form__title">тел</h2>
+            <ul class="form__list form__list--phone">
+              <li class="form__list-item form__list-item--input-underline form__list-item--input-height">
                 <input class="form__list-input form__list-input--phone" type="tel" id="phone" name="phone" required>
                 <label  class="form__label form__labe--phone" for="phone">+7 ХХХ ХХ ХХ*</label>
               </li>
-              <li class="form__list-item form__list-item--input-underline">
+            </ul>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__item">
+          <div class="form__item-wrapper">
+            <h2 class="form__title">E-mail</h2>
+            <ul class="form__list form__list--email">
+              <li class="form__list-item form__list-item--input-underline form__list-item--input-height">
                 <input class="form__list-input form__list-input--email" type="email" id="email" name="email" required>
                 <label class="form__label" for="email">Ваш Email*</label>
               </li>
@@ -136,7 +143,7 @@
 
         <fieldset class="form__item">
           <div class="form__item-wrapper">
-            <legend class="form__title">Доп</legend>
+            <h2 class="form__title">Доп</h2>
             <textarea class="form__textarea" id="comment" name="comment">Опишите все ваши  пожелания к заказу</textarea>
             <label class="form__textarea-label" for="comment">Опишите все ваши  пожелания к заказу</label>
           </div>
@@ -155,7 +162,7 @@
 
       <div class="page-footer__wrapper">
         <div class="page-footer__logo logo">
-            <img src="img/logo-mobile.svg" alt="Мишка" height="45" width="95">
+          <a href="index.html"><img src="img/logo-mobile.svg" alt="Мишка" height="45" width="95"></a>
         </div>
         <div class="page-footer__social">
           <a href="#" class="social-link social-link--instagram">Мы в Инстаграм</a>
@@ -168,6 +175,8 @@
       </div>
 
     </footer>
+
+    <script type="text/javascript" src="./js/script.js"></script>
 
   </body>
 
