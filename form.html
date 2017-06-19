@@ -16,7 +16,13 @@
         <div class="page-header__wrapper">
           <nav class="main-nav main-nav--closed">
             <div class="page-header__logo logo">
-              <a class="page-header__link" href="index.html"><img src="img/logo-mobile.svg" alt="Мишка" height="45" width="95"></a>
+              <a class="page-header__link" href="index.html">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                  <img src="img/logo-mobile.svg" alt="Мишка">
+                </picture>
+              </a>
             </div>
             <button type="button" class="main-nav__hamburger-box">Меню</button>
             <ul class="main-nav__list-items">
@@ -24,8 +30,8 @@
               <li><a class="main-nav__list-item" href="form.html">Вязание на заказ</a></li>
             </ul>
             <ul class="main-nav__user-items">
-              <li><a class="main-nav__user-item main-nav__user-item--search" href="#">Поиск по сайту</a></li>
-              <li><a class="main-nav__user-item main-nav__user-item--cart" href="#">Корзина: пока пуста</a></li>
+              <li><a class="main-nav__user-item main-nav__user-item--search" href="#"><span>Поиск по сайту</span></a></li>
+              <li><a class="main-nav__user-item main-nav__user-item--cart" href="#"><span>Корзина: пока пуста</span></a></li>
             </ul>
             <ul class="main-nav__delivery">
               <li><a href="#">Бесплатная доставка по России</a></li>
@@ -52,12 +58,12 @@
         <fieldset class="form__item">
           <div class="form__item-wrapper">
             <h2 class="form__title">Тип</h2>
-            <ul class="form__list form__list--buttons">
-              <li class="form__list-item form__list-item--padding-left">
+            <ul class="form__list form__list--radio">
+              <li class="form__list-item">
                 <input type="radio" id="access" name="access" checked>
                 <label for="access">Аксессуар для  интерьера</label>
               </li>
-              <li class="form__list-item form__list-item--padding-left">
+              <li class="form__list-item">
                 <input type="radio" id="toys" name="access">
                 <label for="toys">Детская игрушка</label>
               </li>
@@ -68,28 +74,28 @@
         <fieldset class="form__item">
           <div class="form__item-wrapper">
             <h2 class="form__title">Цвет</h2>
-            <ul class="form__list form__list--buttons form__list--flex">
-              <li class="form__list-item form__list-item--padding-left form__list-item--padding-bottom">
+            <ul class="form__list form__list--buttons form__list--checkbox">
+              <li class="form__list-item">
                 <input type="checkbox" id="white" name="white" checked>
                 <label for="white">Белый</label>
               </li>
-              <li class="form__list-item form__list-item--padding-left form__list-item--padding-bottom">
+              <li class="form__list-item">
                 <input type="checkbox" id="grey" name="grey" checked>
                 <label for="grey">Серый</label>
               </li>
-              <li class="form__list-item form__list-item--padding-left form__list-item--padding-bottom">
+              <li class="form__list-item">
                 <input type="checkbox" id="tiffani" name="tiffani">
                 <label for="tiffani">«Тиффани»</label>
               </li>
-              <li class="form__list-item form__list-item--padding-left form__list-item--padding-bottom">
+              <li class="form__list-item">
                 <input type="checkbox" id="black" name="black">
                 <label for="black">Черный</label>
               </li>
-              <li class="form__list-item form__list-item--padding-left form__list-item--padding-bottom">
+              <li class="form__list-item">
                 <input type="checkbox" id="pink" name="pink">
                 <label for="pink">Розовый</label>
               </li>
-              <li class="form__list-item form__list-item--padding-left form__list-item--padding-bottom">
+              <li class="form__list-item">
                 <input type="checkbox" id="orange" name="orange">
                 <label for="orange">Оранжевый</label>
               </li>
@@ -162,7 +168,13 @@
 
       <div class="page-footer__wrapper">
         <div class="page-footer__logo logo">
-          <a href="index.html"><img src="img/logo-mobile.svg" alt="Мишка" height="45" width="95"></a>
+          <a href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" alt="Мишка">
+            </picture>
+          </a>
         </div>
         <div class="page-footer__social">
           <a href="#" class="social-link social-link--instagram">Мы в Инстаграм</a>
@@ -170,7 +182,9 @@
           <a href="#" class="social-link social-link--twitter">Мы в Твиттер</a>
         </div>
         <div class="page-footer__copyright">Разработано
-          <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" height="34" width="30" alt="HTML Academy"></a>
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            <img src="img/logo-htmlacademy.svg" height="34" width="30" alt="HTML Academy">
+          </a>
         </div>
       </div>
 

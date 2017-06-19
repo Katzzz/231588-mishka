@@ -55,6 +55,15 @@
   }
 }
 
+@media
+  (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+   .page-header__promo {
+    background-image: url("../../img/hero-mobile@2x.jpg");
+    background-size: 1150px auto;
+  }
+}
+
 .page-header__list {
   display: flex;
   flex-direction: column;
@@ -106,6 +115,7 @@
 
     border-top: 1px solid @brown-light;
 
+    background-image: url("../../img/hero-desktop@1x.jpg");
     background-size: 150%;
     p {
       width: 497px;
@@ -140,6 +150,15 @@
     &--toys {
     background-position: 88% 58%;
     }
+  }
+}
+
+@media
+  (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+   .page-header__promo {
+    background-image: url("../../img/hero-desktop@2x.jpg");
+    background-size: 1150px auto;
   }
 }
 
