@@ -1,10 +1,6 @@
 "use strict";
 
 module.exports = function(grunt) {
-  grunt.loadNpmTasks("grunt-contrib-less");
-  grunt.loadNpmTasks("grunt-browser-sync");
-  grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks("grunt-postcss");
 
   grunt.initConfig({
     less: {
@@ -56,4 +52,54 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
+
 };
+
+
+  require("load-grunt-tasks")(grunt);
+    grunt.initConfig({
+      postcss: {
+        style: {
+          options: {
+            processors: [
+            require("autoprefixer")({browsers: […]}),
+            require("css-mqpacker")({
+              sort: true
+            })
+          ]
+        },
+        src: "css/*.css"
+      }
+     }
+    })
+
+
+  require("load-grunt-tasks")(grunt);
+    grunt.initConfig({
+      csso: {
+        style: {
+          options: {
+            report: "gzip"
+          },
+        files: {
+          "css/style.min.css": ["css/style.css"]
+        }
+      }
+    }
+  });
+
+  require("load-grunt-tasks")(grunt);
+  grunt.initConfig({
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3,
+          progressive: true
+        },
+        files: [{
+          expand: true,
+          src: ["img/**/*.{png,jpg,gif}"]
+        }]
+      }
+    }
+  });
