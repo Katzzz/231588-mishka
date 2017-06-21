@@ -53,7 +53,40 @@ module.exports = function(grunt) {
         tasks: ["less", "postcss"]
       }
     }
+
+    svgstore: {
+      options: {
+        svg: {
+         style: "display: none"
+        }
+      },
+      symbols: {
+        files: {
+          "img/symbols.svg": ["img/icons/*.svg"]
+        }
+      }
+    }
+
+    svgmin: {
+      symbols: {
+        files: [{
+          expand: true,
+          src: ["img/icons/*.svg"]
+        }]
+      }
+    }
+
   });
 
+    grunt.initConfig({
+      svgstore: { … },
+      svgmin: { … }
+    });
+
+  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
+
   grunt.registerTask("serve", ["browserSync", "watch"]);
+
+
 };
+
