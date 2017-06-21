@@ -12,53 +12,6 @@
   background-color: @grey--lighten;
 }
 
-.catalog-block {
-  margin-top: 31px;
-
-  border: 1px solid @brown-light;
-  &:last-child {
-    margin-bottom: 30px;
-  }
-}
-
-.catalog-block__image {
-  font-size: 0;
-  line-height: 0;
-}
-
-.catalog-block__description {
-  padding: 18px 27px;
-}
-
-.catalog-block__features {
-  padding-bottom: 21px;
-  p {
-    font-size: 13px;
-    line-height: 30px;
-  }
-}
-
-.catalog-block__title {
-  padding-bottom: 20px;
-
-  color: inherit;
-  h2 {
-    font-size: 17px;
-  }
-}
-
-.catalog-block__price {
-  padding-top: 21px;
-
-  border-top: 1px solid @brown-light;
-  background-image: url('../../img/icon-cart.svg');
-  background-repeat: no-repeat;
-  background-position: right 74%;
-  a {
-    font-size: 0;
-  }
-}
-
 @media @tablet-widths {
   .catalog__title {
     position: relative;
@@ -68,44 +21,6 @@
 
     font-size: 43px;
     line-height: 50px;
-  }
-  .catalog-block {
-    display: flex;
-    margin-top: 54px;
-    &:first-child {
-      margin-top: 83px;
-    }
-  }
-  .catalog-block__description {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 50%;
-    justify-content: space-between;
-    padding: 25px 28px 19px 84px;
-  }
-  .catalog-block__image {
-    flex-basis: 50%;
-  }
-  .catalog-block__title {
-    h2 {
-      padding-bottom: 5px;
-
-      font-size: 20px;
-      line-height: 24px;
-    }
-  }
-  .catalog-block__features {
-    p {
-      font-size: 15px;
-    }
-  }
-  .catalog-block__price {
-    padding-top: 23px;
-
-    font-size: 17px;
-    font-weight: 700;
-
-    background-position: 99% 74%;
   }
 }
 
@@ -118,32 +33,5 @@
     display: flex;
     justify-content: space-between;
     margin-top: 154px;
-  }
-  .catalog-block {
-    flex-direction: column;
-    flex-basis: 33%;
-    margin-top: 0;
-    margin-right: 52px;
-    &:last-child {
-      margin-bottom: 0;
-    }
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-  .catalog-block__description {
-    justify-content: flex-start;
-    padding: 21px 27px 0 28px;
-  }
-  .catalog-block__features {
-    p {
-      padding-bottom: 12px;
-    }
-  }
-  .catalog-block__image {
-    width: 314px; //temporary
-  }
-  .catalog-block__price {
-    padding-top: 34px;
   }
 }

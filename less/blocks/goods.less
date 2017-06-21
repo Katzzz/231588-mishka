@@ -112,7 +112,7 @@
     padding-left: 177px;
     p {
       padding-top: 49px;
-      padding-bottom: 47px;
+      padding-bottom: 30px;
     }
   }
   .goods__description {
@@ -130,16 +130,24 @@
     padding-top: 15px;
   }
   .goods__table {
-    margin-bottom: 111px;
+    margin-bottom: 108px;
   }
   .goods__table-item {
+    &:first-child td {
+      padding-top: 25px;
+      padding-bottom: 10px;
+    }
+    & td:last-child {
+      padding-right: 0;
+    }
     td {
       padding-right: 29px;
-      padding-bottom: 7px;
+      padding-bottom: 10px;
+      padding-top: 5px;
     }
   }
   .goods__thumb {
     top: 82px;
-    right: 0;
+    right: 48px;
   }
 }

@@ -74,7 +74,7 @@
         <fieldset class="form__item">
           <div class="form__item-wrapper">
             <h2 class="form__title">Цвет</h2>
-            <ul class="form__list form__list--buttons form__list--checkbox">
+            <ul class="form__list form__list--checkbox">
               <li class="form__list-item">
                 <input type="checkbox" id="white" name="white" checked>
                 <label for="white">Белый</label>
@@ -106,16 +106,16 @@
         <fieldset class="form__item">
           <div class="form__item-wrapper">
             <h2 class="form__title">ФИО</h2>
-            <ul class="form__list form__list--surname">
-              <li class="form__list-item form__list-item--input-underline">
+            <ul class="form__list form__list--labeled">
+              <li class="form__list-item">
                 <label for="name">Имя:</label>
                 <input type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
               </li>
-              <li class="form__list-item form__list-item--input-underline">
+              <li class="form__list-item">
                 <label for="surname">Фамилия:</label>
                 <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
               </li>
-              <li class="form__list-item form__list-item--input-underline">
+              <li class="form__list-item">
                 <label for="patronymic">Отчество:</label>
                 <input type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
               </li>
@@ -126,32 +126,29 @@
         <fieldset class="form__item">
           <div class="form__item-wrapper">
             <h2 class="form__title">тел</h2>
-            <ul class="form__list form__list--phone">
-              <li class="form__list-item form__list-item--input-underline form__list-item--input-height">
-                <input class="form__list-input form__list-input--phone" type="tel" id="phone" name="phone" required>
-                <label  class="form__label form__labe--phone" for="phone">+7 ХХХ ХХ ХХ*</label>
+            <ul class="form__list form__list--unlabeled">
+              <li class="form__list-item">
+                <input class="form__list-input" type="tel" id="phone" name="phone" required>
+                <label for="phone">+7 ХХХ ХХ ХХ*</label>
+              </li>
+            </ul>
+          </div>
+          <div class="form__item-wrapper">
+            <h2 class="form__title form__title--email">E-mail</h2>
+            <ul class="form__list form__list--unlabeled form__list--email">
+              <li class="form__list-item">
+                <input class="form__list-input" type="email" id="email" name="email" required>
+                <label for="email">Ваш Email*</label>
               </li>
             </ul>
           </div>
         </fieldset>
 
         <fieldset class="form__item">
-          <div class="form__item-wrapper">
-            <h2 class="form__title">E-mail</h2>
-            <ul class="form__list form__list--email">
-              <li class="form__list-item form__list-item--input-underline form__list-item--input-height">
-                <input class="form__list-input form__list-input--email" type="email" id="email" name="email" required>
-                <label class="form__label" for="email">Ваш Email*</label>
-              </li>
-            </ul>
-          </div>
-        </fieldset>
-
-        <fieldset class="form__item">
-          <div class="form__item-wrapper">
+          <div class="form__item-wrapper form__textarea">
             <h2 class="form__title">Доп</h2>
-            <textarea class="form__textarea" id="comment" name="comment">Опишите все ваши  пожелания к заказу</textarea>
-            <label class="form__textarea-label" for="comment">Опишите все ваши  пожелания к заказу</label>
+            <textarea id="comment" name="comment">Опишите все ваши пожелания к заказу</textarea>
+            <label class="form__textarea-label" for="comment">Опишите все ваши пожелания к заказу</label>
           </div>
         </fieldset>
 
@@ -169,11 +166,7 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo logo">
           <a href="index.html">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img src="img/logo-mobile.svg" alt="Мишка">
-            </picture>
+            <img src="img/logo-mobile.svg" width="105" heith="40" alt="Мишка">
           </a>
         </div>
         <div class="page-footer__social">
@@ -189,6 +182,30 @@
       </div>
 
     </footer>
+
+    <div class="modal-block modal-block--closed">
+      <form class="modal-block__form" action="https://echo.htmlacademy.ru/" method="get">
+        <h2 class="modal-block__title">Добавить в корзину</h2>
+        <p>Выберите размер:</p>
+        <fieldset>
+          <ul class="modal-block__list">
+            <li class="modal-block__list-item">
+              <label class="modal-block__list-item">S
+              <input type="radio" name="S">
+            </li>
+            <li class="modal-block__list-item">
+              <label class="modal-block__list-item">S
+              <input type="radio" name="S">
+            </li>
+            <li class="modal-block__list-item">
+              <label class="modal-block__list-item">S
+              <input type="radio" name="S">
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit" class="modal-block__btn btn">Добавить</button>
+      </form>
+    </div>
 
     <script type="text/javascript" src="./js/script.js"></script>
 

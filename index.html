@@ -86,7 +86,7 @@
           </div>
           <div class="goods__order">
             <div class="goods__price">Цена: 990 руб.</div>
-            <a href="form.html" class="goods__btn btn">Заказать</a>
+            <a href="#" class="goods__btn btn">Заказать</a>
           </div>
         </div>
 
@@ -151,6 +151,7 @@
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
             <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
           </picture>
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9b826f6ccbc1497339b2472ce9e664b00ed513f16c6903ae661540ae74672f4c&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
         <div class="about-us__btn-wrapper">
           <a href="#" class="about-us__btn btn">Напишите нам</a>
@@ -163,14 +164,12 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo logo">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" alt="Мишка">
-          </picture>
+          <img src="img/logo-mobile.svg" alt="Мишка">
         </div>
         <div class="page-footer__social">
-          <a href="#" class="social-link social-link--instagram">Мы в Инстаграм</a>
+          <a href="#" class="social-link social-link--instagram">
+            <span>Мы в Инстаграм</span>
+          </a>
           <a href="#" class="social-link social-link--facebook">Мы в Фейсбук</a>
           <a href="#" class="social-link social-link--twitter">Мы в Твиттер</a>
         </div>
@@ -179,6 +178,30 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-block modal-block--closed">
+      <form class="modal-block__form" action="https://echo.htmlacademy.ru/" method="get">
+        <h2 class="modal-block__title">Добавить в корзину</h2>
+        <p>Выберите размер:</p>
+        <fieldset>
+          <ul class="modal-block__list">
+            <li class="modal-block__list-item">
+              <label class="modal-block__list-item">S
+              <input type="radio" name="S">
+            </li>
+            <li class="modal-block__list-item">
+              <label class="modal-block__list-item">S
+              <input type="radio" name="S">
+            </li>
+            <li class="modal-block__list-item">
+              <label class="modal-block__list-item">S
+              <input type="radio" name="S">
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit" class="modal-block__btn btn">Добавить</button>
+      </form>
+    </div>
 
     <script type="text/javascript" src="./js/script.js"></script>
 
