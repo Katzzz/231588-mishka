@@ -1,10 +1,7 @@
 "use strict";
 
 module.exports = function(grunt) {
-  grunt.loadNpmTasks("grunt-contrib-less");
-  grunt.loadNpmTasks("grunt-browser-sync");
-  grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks("grunt-postcss");
+  require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
     less: {
@@ -52,7 +49,7 @@ module.exports = function(grunt) {
         files: ["less/**/*.less"],
         tasks: ["less", "postcss"]
       }
-    }
+    },
 
     svgstore: {
       options: {
@@ -65,7 +62,7 @@ module.exports = function(grunt) {
           "img/symbols.svg": ["img/icons/*.svg"]
         }
       }
-    }
+    },
 
     svgmin: {
       symbols: {
@@ -75,13 +72,7 @@ module.exports = function(grunt) {
         }]
       }
     }
-
   });
-
-    grunt.initConfig({
-      svgstore: { … },
-      svgmin: { … }
-    });
 
   grunt.registerTask("symbols", ["svgmin", "svgstore"]);
 
