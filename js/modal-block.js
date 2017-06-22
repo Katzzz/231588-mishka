@@ -17,12 +17,11 @@ if (order) {
 }
 
 window.addEventListener("keydown", function(event) {
-	if (event.keyCode === 27) {
-		if (popup.classList.contains("modal-block--show")) {
-			popup.classList.remove("modal-block--show");
-		}
-    if (overlay.classList.contains("overlay--show")) {
-			overlay.classList.remove("overlay--show");
-		}
-	}
+  if (event.keyCode === 27) {
+    if (popup.classList.contains("modal-block--show"))
+    popup.classList.remove("modal-block--show")
+  }
+  if (overlay.classList.contains("overlay--show")) {
+    overlay.classList.remove("overlay--show");
+  }
 });
