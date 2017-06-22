@@ -1,6 +1,9 @@
 .features {
   .container();
   margin-bottom: 32px;
+  h2 {
+    padding-top: 0;
+  }
 }
 
 .features__list {
@@ -13,7 +16,7 @@
 
 .features__item {
   position: relative;
-  padding-top: 83px;
+  padding-top: 86px;
 
   font-size: 17px;
   font-weight: 700;
@@ -27,8 +30,8 @@
     height: 38px;
   }
   .icon-feature-3 {
-    width: 40px;
-    height: 28px;
+    width: 45px;
+    height: 30px;
   }
   .icon-feature-4 {
     width: 55px;
@@ -47,12 +50,17 @@
 .features__item [class^="icon-feature-"] {
     position: absolute;
     top: 29px;
-    left: 7px;
+    left: 2px;
 
     fill: @base-color--lighten;
   }
 
 @media @tablet-widths {
+  .features {
+    h2 {
+      padding-top: 33px;
+    }
+  }
   .features__list {
     flex-direction: row;
     flex-wrap: wrap;

@@ -167,7 +167,7 @@
   textarea {
     width: 230px;
     height: 114px;
-    margin-top: 25px;
+    margin-top: 17px;
     padding-top: 14px;
     padding-left: 16px;
     padding-right: 10px;
@@ -284,7 +284,7 @@
     flex-basis: 167px;
     padding-top: 66px;
     &--email {
-      padding-top: 41px;
+      padding-top: 18px;
     }
   }
   .form__description {
@@ -373,10 +373,18 @@
       }
     }
     &--email {
-      padding-top: 25px;
-      padding-bottom: 51px;
+      padding-top: 0px;
+      padding-bottom: 30px;
     }
-  }
+    .icon-mail {
+      top: 12px;
+      right: 15px;
+    }
+    .icon-phone {
+      top: 7px;
+      right: 23px;
+    }
+ }
   .form__textarea {
     padding-bottom: 20px;
     textarea {
@@ -448,7 +456,7 @@
     padding-top: 66px;
     padding-left: 65px;
     &--email {
-      padding-top: 44px;
+      padding-top: 24px;
     }
   }
   .form__description {
@@ -461,6 +469,7 @@
   }
   .form__list {
     flex-basis: 700px;
+    padding-left: 0;
     &--radio {
       padding-top: 34px;
       padding-bottom: 42px;
@@ -488,11 +497,17 @@
         padding-left: 3px;
       }
     }
+    &--unlabeled {
+      input {
+        padding-left: 0;
+      }
+    }
   }
   .form__textarea {
     textarea {
       width: 671px;
       margin-bottom: 8px;
+      margin-top: 54px;
     }
   }
   .form__footer {
