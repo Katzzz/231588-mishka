@@ -12,6 +12,20 @@
   .page-header__link {
     padding: 0;
   }
+  .logo-tablet,
+  .logo-desktop {
+    display: none,
+  }
+  .logo-mobile {
+    width: 90px;
+    height: 40px;
+  }
+  .logo-mobile:hover {
+    fill: @logo-hover;
+  }
+  .logo-mobile:active {
+    fill: @logo-focus;
+  }
 }
 
 @media @tablet-widths {
@@ -25,6 +39,24 @@
   .page-header__link {
     padding: 0;
   }
+  .page-header__logo {
+    .logo-mobile,
+    .logo-desktop {
+      display: none;
+    }
+    .logo-tablet {
+      display: inline-block;
+      padding-top: 0;
+      width: 113px;
+      height: 47px;
+    }
+    .logo-tablet:hover {
+      fill: @logo-hover;
+    }
+    .logo-tablet:active {
+      fill: @logo-focus;
+    }
+  }
 }
 
 @media @desktop-widths {
@@ -32,6 +64,22 @@
     order: 1;
     padding-top: 14px;
     padding-right: 60px;
+    .logo-mobile,
+    .logo-tablet {
+      display: none;
+    }
+    .logo-desktop {
+      display: inline-block;
+      padding-top: 0;
+      width: 155px;
+      height: 71px;
+    }
+    .logo-desktop:hover {
+      fill: @logo-hover;
+    }
+    .logo-desktop:active {
+      fill: @logo-focus;
+    }
   }
 }
 
@@ -73,11 +121,25 @@
 }
 
 .page-header__list li {
+  position: relative;
+  .icon-interior {
+    width: 42px;
+    height: 62px;
+    fill: @left-btn-icon;
+  }
+  .icon-toy {
+    width: 65px;
+    height: 61px;
+    fill: @right-btn-icon;
+  }
+  .icon-interior,
+  .icon-toy {
+    position: absolute;
+    top: 23px;
+    right: 19px;
+  }
   &:first-child {
     background-color: @base-color--lighten;
-  }
-  &:first-child:hover {
-    background-color: @left-btn--hover;
   }
   &:first-child:active a,
   &:first-child:active svg {
@@ -96,16 +158,6 @@
 }
 
 .page-header__list-item {
-  &--room-design {
-    background-image: url(../img/icon-interior.svg);
-    background-position: 87% 55%;
-  }
-  &--toys {
-    background-image: url(../img/icon-toy.svg);
-    background-position: 90% center;
-  }
-  background-position: right;
-  background-repeat: no-repeat;
   a {
     display: block;
     width: 130px;
@@ -130,9 +182,6 @@
     margin-top: -42px;
 
     border-top: 1px solid @brown-light;
-
-    background-image: url("../../img/hero-desktop@1x.jpg");
-    background-size: 150%;
     p {
       width: 497px;
       padding-top: 152px;
@@ -160,11 +209,6 @@
 
       font-size: 20px;
       line-height: 30px;
-    }
-  }
-  .page-header__list-item {
-    &--toys {
-    background-position: 88% 58%;
     }
   }
 }

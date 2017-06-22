@@ -1,4 +1,5 @@
 .video-block {
+  position: relative;
   .container();
   margin-bottom: 60px;
   padding: 0;
@@ -8,8 +9,42 @@
     background-color: @brown-light;
     border-bottom: 1px solid @brown-light;
   }
+  .video-play {
+    position: absolute;
+    width: 102px;
+    height: 78px;
+    top: 131px;
+    left: 79px;
+
+    cursor: pointer;
+  }
+  .video-play:hover {
+    width: 121px;
+    height: 92px;
+    top: 121px;
+    left: 70px;
+  }
+  .video-play:active {
+    width: 81px;
+    height: 62px;
+    top: 141px;
+    left: 89px;
+
+    opacity: .7;
+  }
 }
 
+.video-block__title-block {
+  position: relative;
+  .icon-video {
+    position: absolute;
+    top: 31px;
+    left: 35px;
+    width: 30px;
+    height: 30px;
+    fill: @base-color--lighten;
+  }
+}
 .video-block__title {
   padding: 24px 0;
   padding-left: 90px;
@@ -52,14 +87,30 @@
       font-size: 15px;
       line-height: 30px;
     }
+    .video-play {
+      top: 188px;
+      left: 284px;
+    }
+    .video-play:hover {
+      top: 188px;
+      left: 274px;
+    }
+    .video-play:active {
+      top: 198px;
+      left: 294px;
+    }
   }
-  .video-block__title {
+  .video-block__title-block {
     order: 1;
-    padding-top: 37px;
-    padding-left: 106px;
-
-    font-size: 20px;
-    background-position: 7% 60%;
+    padding-top: 13px;
+    padding-left: 17px;
+    h2 {
+      font-size: 20px;
+    }
+    .icon-video {
+      top: 35px;
+      left: 43px;
+    }
   }
   .video-block__features {
     order: 2;
@@ -78,11 +129,12 @@
   .video-block {
     position: relative;
     margin-top: 55px;
+    margin-bottom: 105px;
     flex-direction: row;
     padding: 0;
     p {
       padding-top: 0;
-      padding-left: 43px;
+      padding-left: 73px;
     }
     img {
       flex-grow: 1;
@@ -90,22 +142,28 @@
   }
   .video-block__features {
     flex-grow: 1;
-    width: 245px;
+    width: 251px;
     padding-top: 177px
   }
-  .video-block__title {
+  .video-block__features:hover {
+    box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.2);
+  }
+  .video-block__title-block {
     position: absolute;
     width: 40px;
-    top: 6px;
-    right: 247px;
-    padding-left: 0;
+    top: 9px;
+    right: 273px;
     padding-top: 90px;
 
     background-position: center 30%;
+    h2 {
+      padding-left: 23px;
+      padding-top: 0;
+    }
   }
   .video-btn {
     margin-top: 10px;
-    margin-right: 17px;
-    margin-left: 45px;
+    margin-right: 19px;
+    margin-left: 75px;
   }
 }
