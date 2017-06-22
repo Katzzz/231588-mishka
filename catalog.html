@@ -27,14 +27,14 @@
           <nav class="main-nav main-nav--closed">
             <div class="page-header__logo logo">
               <a class="page-header__link" href="index.html">
-                <svg class="logo-mobile">
-                  <use xlink:href="#logo-mobile" width="90" height="40"></use>
+                <svg class="logo-mobile" width="90" height="40">
+                  <use xlink:href="#logo-mobile"></use>
                 </svg>
-                <svg class="logo-tablet">
-                  <use xlink:href="#logo-tablet" width="113" height="37"></use>
+                <svg class="logo-tablet" width="113" height="37">
+                  <use xlink:href="#logo-tablet"></use>
                 </svg>
-                <svg class="logo-desktop">
-                  <use xlink:href="#logo-desktop" width="155" height="71"></use>
+                <svg class="logo-desktop" width="155" height="71">
+                  <use xlink:href="#logo-desktop"></use>
                 </svg>
               </a>
             </div>
@@ -46,16 +46,16 @@
             <ul class="main-nav__user-items">
               <li>
                 <a class="main-nav__user-item main-nav__user-item--search" href="#">
-                  <svg class="icon-search">
-                    <use xlink:href="#icon-search" width="21" height="21"></use>
+                  <svg class="icon-search" width="21" height="21">
+                    <use xlink:href="#icon-search"></use>
                   </svg>
                   <span>Поиск по сайту</span>
                 </a>
               </li>
               <li>
                 <a class="main-nav__user-item main-nav__user-item--cart" href="#">
-                  <svg class="icon-cart">
-                    <use xlink:href="#icon-cart" width="21" height="21"></use>
+                  <svg class="icon-cart" width="21" height="21">
+                    <use xlink:href="#icon-cart"></use>
                   </svg>
                   <span>Корзина: пока пуста</span>
                 </a>
@@ -77,11 +77,11 @@
     <main class="catalog">
 
       <h1 class="catalog__title">Каталог товаров</h1>
-      <!--<svg class="bg-zigzag-line">
+      <!--<svg class="bg-zigzag-line" height="20">
         <use xlink:href="#bg-zigzag-line" width="100%" height="20"></use>
       </svg>-->
-      <!--<svg class="bg-zigzag-fill">
-        <use xlink:href="#bg-zigzag-fill" width="100%" height="20"></use>
+      <!--<svg class="bg-zigzag-fill" height="20">
+        <use xlink:href="#bg-zigzag-fill" "></use>
       </svg>-->
 
       <div class="catalog__wrapper">
@@ -103,7 +103,7 @@
               </div>
               <div class="catalog-block__price">
                 <span>1 200 руб.</span>
-                <a href="#" class="catalog-block__cart">
+                <a href="form.html" class="catalog-block__cart">
                   Корзина
                   <svg class="icon-cart" width="22" height="22">
                     <use xlink:href="#icon-cart"></use>
@@ -130,7 +130,7 @@
               </div>
               <div class="catalog-block__price">
                 <span>690 руб.</span>
-                <a href="#" class="catalog-block__cart">
+                <a href="form.html" class="catalog-block__cart">
                   Корзина
                   <svg class="icon-cart" width="22" height="22">
                     <use xlink:href="#icon-cart"></use>
@@ -157,7 +157,7 @@
               </div>
               <div class="catalog-block__price">
                 <span>1 500 руб.</span>
-                <a href="#">
+                <a href="form.html">
                   Корзина
                   <svg class="icon-cart" width="22" height="22">
                     <use xlink:href="#icon-cart"></use>
@@ -186,7 +186,7 @@
         </picture>
         <div class="video-block__features">
           <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a href="form.html" class="video-btn btn">Сделать заказ</a>
+          <a href="order.html" class="video-btn btn">Сделать заказ</a>
         </div>
       </article>
 
@@ -195,28 +195,38 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo logo">
-          <svg class="logo-footer" width="105" height="37">
-            <use xlink:href="#logo-footer" width="105" height="37"></use>
-          </svg>
+          <a href="index.html">
+            Мишка
+            <svg class="logo-footer" width="105" height="37">
+              <use xlink:href="#logo-footer"></use>
+            </svg>
+          </a>
         </div>
         <div class="page-footer__social">
           <a href="#" class="social-link social-link--instagram">
-            <svg class="icon-insta">
+            <svg class="icon-insta" width="22" height="22">
               <use xlink:href="#icon-insta"></use>
             </svg>
             <span>Мы в Инстаграм</span>
           </a>
           <a href="#" class="social-link social-link--facebook">
-            <svg class="icon-fb">
+            <svg class="icon-fb" width="15" height="30">
               <use xlink:href="#icon-fb"></use>
             </svg>
             Мы в Фейсбук
           </a>
           <a href="#" class="social-link social-link--twitter">
-            <svg class="icon-twitter">
+            <svg class="icon-twitter" width="25" height="25">
               <use xlink:href="#icon-twitter"></use>
             </svg>
             Мы в Твиттер
+          </a>
+        </div>
+        <div class="page-footer__copyright">Разработано
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="logo-htmlacademy" width="30" height="35">
+              <use xlink:href="#logo-htmlacademy"></use>
+            </svg>
           </a>
         </div>
         <div class="page-footer__copyright">Разработано
@@ -240,11 +250,11 @@
               <input type="radio" name="S">
             </li>
             <li class="modal-block__list-item">
-              <label class="modal-block__list-item">S</label>
+              <label class="modal-block__list-item">M</label>
               <input type="radio" name="S">
             </li>
             <li class="modal-block__list-item">
-              <label class="modal-block__list-item">S</label>
+              <label class="modal-block__list-item">L</label>
               <input type="radio" name="S">
             </li>
           </ul>

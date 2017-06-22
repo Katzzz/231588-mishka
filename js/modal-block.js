@@ -1,4 +1,5 @@
 var order = document.querySelector(".goods__order");
+var orderCatalog = document.querySelector(".video-block");
 var popup = document.querySelector(".modal-block");
 var popupClose = popup.querySelector(".modal-block--closed");
 var overlay = document.querySelector(".overlay");
@@ -8,6 +9,19 @@ if (order) {
     var target = event.target;
     event.preventDefault();
     if (target.classList.contains("goods__btn")) {
+      popup.classList.remove("modal-block--closed");
+      popup.classList.add("modal-block--show");
+      overlay.classList.remove("overlay--close");
+      overlay.classList.add("overlay--show");
+    }
+  });
+}
+
+if (orderCatalog) {
+  orderCatalog.addEventListener("click", function(event) {
+    var target = event.target;
+    event.preventDefault();
+    if (target.classList.contains("video-btn")) {
       popup.classList.remove("modal-block--closed");
       popup.classList.add("modal-block--show");
       overlay.classList.remove("overlay--close");
