@@ -29,21 +29,46 @@
     font-weight: 400;
     font-size: 17px;
     line-height: 18px;
+    font-family: 'Open Sans', 'Arial', sans-serif;
   }
   &::-moz-placeholder {
     color: @grey--light;
     font-weight: 400;
     font-size: 17px;
     line-height: 18px;
+    font-family: 'Open Sans', 'Arial', sans-serif;
   }
   &::-ms-input-placeholder {
     color: @grey--light;
     font-weight: 400;
     font-size: 17px;
     line-height: 18px;
+    font-family: 'Open Sans', 'Arial', sans-serif;
   }
   @media @tablet-widths {
-    font-size: 19px;
-    padding-left: 20px;
+    &::-webkit-input-placeholder {
+      padding-left: 20px;
+
+      color: @grey--light;
+      font-weight: 400;
+      font-size: 19px;
+      font-family: 'Open Sans', 'Arial', sans-serif;
+    }
+    &::-moz-placeholder {
+      padding-left: 20px;
+
+      color: @grey--light;
+      font-weight: 400;
+      font-size: 19px;
+      font-family: 'Open Sans', 'Arial', sans-serif;
+    }
+    &::-ms-input-placeholder {
+      padding-left: 20px;
+
+      color: @grey--light;
+      font-weight: 400;
+      font-size: 19px;
+      font-family: 'Open Sans', 'Arial', sans-serif;
+    }
   }
 }

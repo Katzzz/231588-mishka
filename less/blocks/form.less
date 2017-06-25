@@ -112,12 +112,12 @@
 
       border: none;
       border-bottom: 2px solid #000;
+      .placeholder();
     }
     input:hover,
     input:focus {
       border-color: @base-color--lighten;
     }
-    .placeholder();
   }
   &--unlabeled {
     padding-top: 20px;
@@ -137,6 +137,10 @@
       border-bottom: 2px solid #000;
 
     .placeholder();
+    }
+    input:hover,
+    input:focus {
+      border-color: @base-color--lighten;
     }
   }
 }
@@ -182,8 +186,10 @@
 
     font-size: 17px;
     line-height: 18px;
+    font-family: 'Open Sans', 'Arial', sans-serif;
 
     resize: none;
+    .placeholder();
   }
   textarea:hover,
   textarea:focus {
@@ -256,7 +262,7 @@
 }
 
 .form__list input[type="checkbox"]:checked + label::after {
-  content: url('../../img/icon-tick.svg');
+  content: url('../img/icon-tick.svg');
   position: absolute;
   width: 33px;
   height: 26px;

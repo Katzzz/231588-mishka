@@ -36,12 +36,20 @@
   justify-content: space-around;
   padding: 22px 24px;
 
+  border-top: 1px solid @grey--light;
+  a {
+    display: flex;
+    justify-content: space-between;
+  }
+  span {
   font-size: 19px;
   font-weight: 700;
   line-height: 29px;
-  color: inherit;
-
-  border-top: 1px solid @grey--light;
+  color: #000;
+  }
+  a:active span {
+    color: @link-hover;
+  }
   .logo-htmlacademy {
     width: 30px;
     height: 35px;

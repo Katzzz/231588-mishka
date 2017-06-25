@@ -31,6 +31,12 @@
   h2 {
     font-size: 17px;
   }
+  &:hover {
+    color: @link-hover;
+  }
+  &:focus {
+    color: @link-active;
+  }
 }
 
 .catalog-block__price {
@@ -45,6 +51,12 @@
     width: 22px;
     height: 22px;
     fill: @icon-base;
+  }
+  .icon-cart:hover {
+    fill: @icon-hover;
+  }
+  .icon-cart:active {
+    fill: @icon-focus;
   }
   a {
     font-size: 0;
@@ -111,6 +123,9 @@
   }
   .catalog-block__description:hover {
     box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.2);
+  }
+  .catalog-block__description:active {
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
   }
   .catalog-block__features {
     padding-bottom: 14px;
