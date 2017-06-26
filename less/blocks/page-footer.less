@@ -5,16 +5,17 @@
 .page-footer {
   margin-top: 40px;
 
-  background-color: @grey--lighten;
-  .logo-footer {
-    width: 105px;
-    height: 37px;
+  background-color: @grey-lighten;
+}
+
+.page-footer__logo-footer {
+  width: 105px;
+  height: 37px;
+  &:hover {
+    fill: @base-color-lighten;
   }
-  .logo-footer:hover {
-    fill: @base-color--lighten;
-  }
-  .logo-footer:active,
-  .logo-footer:focus {
+  &:active,
+  &:focus {
     opacity: .3;
   }
 }
@@ -36,7 +37,7 @@
   justify-content: space-around;
   padding: 22px 24px;
 
-  border-top: 1px solid @grey--light;
+  border-top: 1px solid @grey-light;
   a {
     display: flex;
     justify-content: space-between;
@@ -47,19 +48,21 @@
   line-height: 29px;
   color: #000;
   }
-  a:active span {
-    color: @link-hover;
+}
+
+.page-footer__copyright a:active span {
+  color: @link-hover;
+}
+
+.page-footer__logo-htmlacademy {
+  width: 30px;
+  height: 35px;
+  fill: @base-color-lighten;
+  &:hover {
+    fill: @right-btn-hover;
   }
-  .logo-htmlacademy {
-    width: 30px;
-    height: 35px;
-    fill: @base-color--lighten;
-  }
-  .logo-htmlacademy {
-    fill: @right-btn--hover;
-  }
-  .logo-htmlacademy:active,
-  .logo-htmlacademy:focus {
+  &:active,
+  &:focus {
     opacity: .3;
   }
 }
@@ -83,10 +86,6 @@
     display: block;
     padding: 45px 0;
     padding-right: 88px;
-    .logo-mobile {
-      width: 105px;
-      height: 37px;
-    }
   }
   .page-footer__social {
     padding: 50px 0;
@@ -98,9 +97,9 @@
     padding-top: 53px;
 
     border: none;
-    .logo-htmlacademy {
-      padding-left: 24px;
-    }
+  }
+  .page-footer__logo-htmlacademy {
+    padding-left: 24px;
   }
 }
 

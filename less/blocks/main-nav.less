@@ -101,21 +101,20 @@
 
 .main-nav__user-item {
   position: relative;
-  .icon-cart,
-  .icon-search  {
-    position: absolute;
-    top: 26px;
-    left: 25px;
-    width: 21px;
-    height: 21px;
-    fill: @icon-base;
-  }
-  .icon-cart:hover,
-  .icon-search:hover {
+}
+
+.main-nav__icon-cart,
+.main-nav__icon-search  {
+  position: absolute;
+  top: 26px;
+  left: 25px;
+  width: 21px;
+  height: 21px;
+  fill: @icon-base;
+  &:hover {
     fill: @icon-hover;
   }
-  .icon-cart:active,
-  .icon-search:active {
+  &:active {
     fill: @icon-focus;
   }
 }
@@ -224,15 +223,15 @@
     padding-bottom: 32px;
 
     border-left: 1px solid @brown-light;
-    .icon-cart,
-    .icon-search  {
-      position: absolute;
-      top: 40px;
-      left: 25px;
-      width: 21px;
-      height: 21px;
-      fill: @icon-base;
-    }
+  }
+  .main-nav__icon-cart,
+  .main-nav__icon-search  {
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    width: 21px;
+    height: 21px;
+    fill: @icon-base;
   }
   .main-nav__delivery {
     order: 4;
@@ -262,13 +261,13 @@
     a {
       font-size: 17px;
     }
-    & li:last-child a {
-      padding-left: 31px;
-    }
-    & li:first-child a {
+  }
+  .main-nav__list-items li:last-child a {
+    padding-left: 31px;
+  }
+  .main-nav__list-items li:first-child a {
       padding-right: 37px;
       border-right: 1px solid @brown-light;
-    }
   }
   .main-nav__list-item {
     padding-top: 38px;

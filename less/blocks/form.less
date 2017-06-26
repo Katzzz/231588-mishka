@@ -16,19 +16,21 @@
   text-align: center;
 
   border-top: 1px solid @brown-light;
-  background-color: @grey--lighten;
+  background-color: @grey-lighten;
 }
 
-.form__description p {
-  padding: 23px 30px;
-  padding-bottom: 25px;
-  font-size: 13px;
+.form__description {
+  p {
+    padding: 23px 30px;
+    padding-bottom: 25px;
+    font-size: 13px;
+  }
 }
 
 .form__title {
   position: relative;
 
-  color: @base-color--lighten;
+  color: @base-color-lighten;
   font-size: 17px;
   font-weight: 700;
   line-height: 16px;
@@ -41,7 +43,7 @@
     width: 199px;
     height: 1px;
 
-    background-color: @base-color--lighten;
+    background-color: @base-color-lighten;
   }
 }
 
@@ -72,9 +74,9 @@
     }
     label {
       position: relative;
-      padding-top: 15px;
-      padding-bottom: 10px;
-      padding-left: 63px;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      padding-left: 85px;
     }
   }
   &--checkbox {
@@ -90,17 +92,11 @@
       padding-bottom: 28px;
       padding-left: 63px;
     }
-    li:last-child label {
-      padding-bottom: 10px;
-    }
   }
   &--labeled {
     padding-top: 30px;
     li {
       padding-bottom: 23px;
-    }
-    li:last-child {
-      padding-bottom: 13px;
     }
     input {
       width: 100%;
@@ -116,7 +112,7 @@
     }
     input:hover,
     input:focus {
-      border-color: @base-color--lighten;
+      border-color: @base-color-lighten;
     }
   }
   &--unlabeled {
@@ -135,14 +131,20 @@
 
       border: none;
       border-bottom: 2px solid #000;
-
-    .placeholder();
+      .placeholder();
     }
     input:hover,
     input:focus {
-      border-color: @base-color--lighten;
+      border-color: @base-color-lighten;
     }
   }
+}
+
+.form__list--checkox li:last-child label {
+  padding-bottom: 10px;
+}
+.form__list--labeled li:last-child label {
+  padding-bottom: 13px;
 }
 
 .form__list-item {
@@ -166,13 +168,14 @@
   }
   .icon-phone:hover,
   .icon-mail:hover {
-    fill: @base-color--lighten;
+    fill: @base-color-lighten;
   }
 }
 
 .form__textarea {
-  margin-bottom: -40px;
+  margin-bottom: -22px;
   padding-bottom: 20px;
+  .container();
   textarea {
     width: 230px;
     height: 114px;
@@ -193,7 +196,7 @@
   }
   textarea:hover,
   textarea:focus {
-    border-color: @base-color--lighten;
+    border-color: @base-color-lighten;
   }
 }
 
@@ -239,15 +242,15 @@
   left: 12px;
 
   border-radius: 50%;
-  background-color: @base-color--lighten;
+  background-color: @base-color-lighten;
 }
 
 .form__list input[type="radio"] + label:hover::before {
-  border-color: @base-color--lighten;;
+  border-color: @base-color-lighten;;
 }
 
 .form__list input[type="radio"]:active + label::before {
-  border-color: @grey--light;
+  border-color: @grey-light;
 }
 
 .form__list input[type="checkbox"] + label::before {
@@ -271,11 +274,11 @@
 }
 
 .form__list input[type="checkbox"] + label:hover::before {
-  border-color: @base-color--lighten;;
+  border-color: @base-color-lighten;;
 }
 
 .form__list input[type="checkbox"]:active + label::before {
-  border-color: @grey--light;
+  border-color: @grey-light;
 }
 
 
@@ -314,7 +317,7 @@
   }
   .form__item {
     &:nth-child(2n) {
-      background-color: @grey--lighten;
+      background-color: @grey-lighten;
     }
   }
   .form__list {
@@ -331,12 +334,6 @@
       li {
         flex-basis: 50%;
       }
-      li:last-child label {
-        padding-bottom: 10px;
-      }
-      li:nth-child(2n) label {
-        padding-left: 92px;
-      }
       label {
         position: relative;
         padding-top: 34px;
@@ -349,12 +346,10 @@
       padding-bottom: 38px;
       .form__list-item {
         display: flex;
+        align-items: center;
       }
       li {
         padding-bottom: 10px;
-      }
-      li:last-child {
-        padding-bottom: 13px;
       }
       input {
         width: 100%;
@@ -387,7 +382,12 @@
       right: 23px;
     }
   }
+  .form__list--checkox li:nth-child(2n) label {
+    padding-left: 92px;
+  }
   .form__textarea {
+    display: flex;
+    justify-content: flex-start;
     padding-bottom: 20px;
     textarea {
       width: 471px;
@@ -432,18 +432,15 @@
     top: 31px;
     left: 17px;
   }
-
   .form__list input[type="checkbox"] + label::before {
     width: 51px;
     height: 48px;
     top: 19px;
   }
-
-.form__list input[type="checkbox"]:checked + label::after {
-  top: 34px;
-  left: 13px;
-}
-
+  .form__list input[type="checkbox"]:checked + label::after {
+    top: 34px;
+    left: 13px;
+  }
 }
 
 @media @desktop-widths {
@@ -492,9 +489,6 @@
       li {
         padding-bottom: 10px;
       }
-      li:last-child label {
-        padding-bottom: 24px;
-      }
       label {
         padding-left: 3px;
       }
@@ -504,6 +498,9 @@
         padding-left: 0;
       }
     }
+  }
+  .form__list--labeled li:last-child label {
+    padding-bottom: 24px;
   }
   .form__textarea {
     textarea {

@@ -25,16 +25,12 @@
     <header class="page-header">
       <div class="page-header__top">
         <nav class="main-nav main-nav--closed main-nav--nojs">
-          <div class="page-header__logo logo">
-            <svg class="logo-mobile" width="90" height="40">
-              <use xlink:href="#logo-mobile"></use>
-            </svg>
-            <svg class="logo-tablet" width="125" height="45">
-              <use xlink:href="#logo-tablet"></use>
-            </svg>
-            <svg class="logo-desktop" width="155" height="71">
-              <use xlink:href="#logo-desktop"></use>
-            </svg>
+          <div class="page-header__logo">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg" width="155" height="71">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="125" height="45">
+              <img src="img/logo-mobile.svg" width="90" height="40" alt="Мишка">
+            </picture>
           </div>
           <button type="button" class="main-nav__hamburger-box">Меню</button>
           <ul class="main-nav__list-items">
@@ -43,16 +39,16 @@
           </ul>
           <ul class="main-nav__user-items">
             <li>
-              <a class="main-nav__user-item main-nav__user-item--search" href="#">
-                <svg class="icon-search" width="21" height="21">
+              <a class="main-nav__user-item" href="#">
+                <svg class="main-nav__icon-search" width="21" height="21">
                   <use xlink:href="#icon-search"></use>
                 </svg>
                 <span>Поиск по сайту</span>
               </a>
             </li>
             <li>
-              <a class="main-nav__user-item main-nav__user-item--cart" href="#">
-                <svg class="icon-cart" width="21" height="21">
+              <a class="main-nav__user-item" href="#">
+                <svg class="main-nav__icon-cart" width="21" height="21">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
                 <span>Корзина: пока пуста</span>
@@ -78,7 +74,7 @@
             <li class="page-header__list-item page-header__list-item--room-design">
               <a href="#">
                 Предметы интерьера
-                <svg class="icon-interior" width="42" height="62">
+                <svg class="page-header__icon-interior" width="42" height="62">
                   <use xlink:href="#icon-interior"></use>
                 </svg>
               </a>
@@ -86,7 +82,7 @@
             <li class="page-header__list-item page-header__list-item--toys">
               <a href="#">
                 Детские игрушки
-                <svg class="icon-toy" width="65" height="61">
+                <svg class="page-header__icon-toy" width="65" height="61">
                   <use xlink:href="#icon-toy"></use>
                 </svg>
               </a>
@@ -143,36 +139,36 @@
           <h2 class="page-content__title">Коротко о нас:</h2>
           <ul class="features__list">
             <li class="features__item features__item--eco">
-              <svg class="icon-feature-1" width="35" height="39">
+              <svg class="features__icon-feature-1" width="35" height="39">
                 <use xlink:href="#icon-feature-1"></use>
               </svg>
               Экологически чистые материалы
             </li>
             <li class="features__item features__item--style">
-              <svg class="icon-feature-3" width="45" height="30">
+              <svg class="features__icon-feature-3" width="45" height="30">
                 <use xlink:href="#icon-feature-3"></use>
               </svg>
               Скандинавский стиль по российской цене
             </li>
             <li class="features__item features__item--likes">
-              <svg class="icon-feature-5" width="35" height="28">
+              <svg class="features__icon-feature-5" width="35" height="28">
                 <use xlink:href="#icon-feature-5"></use>
               </svg>
               Увеличивает лайки на фотографиях
             </li>
             <li class="features__item features__item--handmade">
-              <svg class="icon-feature-2" width="38" height="38">
+              <svg class="features__icon-feature-2" width="38" height="38">
                 <use xlink:href="#icon-feature-2"></use>
               </svg>
               Связано вручную с любовью и умилением
             </li>
             <li class="features__item features__item--support">
-              <svg class="icon-feature-4" width="55" height="29">
+              <svg class="features__icon-feature-4" width="55" height="29">
                 <use xlink:href="#icon-feature-4"></use>
               </svg>
               Поддержка отечественного производителя</li>
             <li class="features__item features__item--packed">
-              <svg class="icon-feature-6" width="37" height="35">
+              <svg class="features__icon-feature-6" width="37" height="35">
                 <use xlink:href="#icon-feature-6"></use>
               </svg>
               Поставляется в подарочной упаковке
@@ -244,7 +240,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo logo">
-          <svg class="logo-footer" width="105" height="37">
+          <svg class="page-footer__logo-footer" width="105" height="37">
             <use xlink:href="#logo-footer"></use>
           </svg>
         </div>
@@ -271,7 +267,7 @@
         <div class="page-footer__copyright">
           <a href="https://htmlacademy.ru/intensive/adaptive">
             <span>Разработано</span>
-            <svg class="logo-htmlacademy" >
+            <svg class="page-footer__logo-htmlacademy" width="30" heigth="35">
               <use xlink:href="#logo-htmlacademy"></use>
             </svg>
           </a>
