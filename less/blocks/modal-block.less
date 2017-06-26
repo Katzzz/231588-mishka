@@ -12,6 +12,8 @@
 
     background-color: #fff;
     border: 1px solid @grey--light;
+    border-left: none;
+    border-right: none;
     box-shadow: 0 5px 20px 5px rgba(0,0,0,.2);
   }
   p {
@@ -45,7 +47,7 @@
   margin: 0 auto;
   padding-bottom: 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .modal-block__list-item {
@@ -76,7 +78,8 @@
 }
 
 .modal-block__btn{
-  width: 100%;
+  width: 260px;
+  margin: 0 auto;
   margin-bottom: 46px;
 
   background-color: @base-color--lighten;
@@ -85,6 +88,9 @@
 }
 
 @media @tablet-widths {
+  .modal-block__form {
+    width: 350px;
+  }
   .modal-block__list-item {
     label  {
       width: 110px;
@@ -98,6 +104,13 @@
       width: 565px;
       left: 50%;
       margin-left: -280px;
+
+      border: 1px solid @grey--light;
     }
+  }
+  .modal-block__btn {
+    width: 363px;
+    margin: 0 auto;
+    margin-bottom: 30px;
   }
 }

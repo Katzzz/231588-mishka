@@ -6,37 +6,69 @@
   margin-top: 40px;
 
   background-color: @grey--lighten;
+  .logo-footer {
+    width: 105px;
+    height: 37px;
+  }
+  .logo-footer:hover {
+    fill: @base-color--lighten;
+  }
+  .logo-footer:active,
+  .logo-footer:focus {
+    opacity: .3;
+  }
 }
 
 .page-footer__social {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: baseline;
   height: 40px;
-  padding-top: 19px;
+  padding-top: 23px;
   padding-bottom: 20px;
   a {
-    text-indent: -9999px;
+    font-size: 0;
   }
 }
 
 .page-footer__copyright {
   display: flex;
-  justify-content: center;
-  padding: 22px 0;
+  justify-content: space-around;
+  padding: 22px 24px;
 
+  border-top: 1px solid @grey--light;
+  a {
+    display: flex;
+    justify-content: space-between;
+  }
+  span {
   font-size: 19px;
   font-weight: 700;
   line-height: 29px;
-
-  border-top: 2px solid @grey--light;
-  img {
-    align-self: baseline;
-    padding-left: 30px;
+  color: #000;
+  }
+  a:active span {
+    color: @link-hover;
+  }
+  .logo-htmlacademy {
+    width: 30px;
+    height: 35px;
+    fill: @base-color--lighten;
+  }
+  .logo-htmlacademy {
+    fill: @right-btn--hover;
+  }
+  .logo-htmlacademy:active,
+  .logo-htmlacademy:focus {
+    opacity: .3;
   }
 }
 
 .page-footer__logo {
   display: none;
+  a {
+    font-size: 0;
+  }
 }
 
 @media @tablet-widths {
@@ -49,15 +81,26 @@
   }
   .page-footer__logo {
     display: block;
-    padding: 52px 0;
-    padding-right: 90px;
+    padding: 45px 0;
+    padding-right: 88px;
+    .logo-mobile {
+      width: 105px;
+      height: 37px;
+    }
   }
   .page-footer__social {
-    padding: 57px 0;
+    padding: 50px 0;
   }
   .page-footer__copyright {
-    padding: 57px 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    padding-top: 53px;
+
     border: none;
+    .logo-htmlacademy {
+      padding-left: 24px;
+    }
   }
 }
 
@@ -66,6 +109,9 @@
     margin-top: 50px;
   }
   .page-footer__social {
-    padding: 53px 0;
+    padding: 47px 0;
+  }
+  .page-footer__copyright {
+    padding-top: 57px;
   }
 }

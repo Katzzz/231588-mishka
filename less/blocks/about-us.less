@@ -2,7 +2,7 @@
   .container();
   margin-bottom: 63px;
   h2 {
-    padding-top: 36px;
+    padding-top: 11px;
   }
 }
 
@@ -25,13 +25,28 @@
 
 .about-us__email {
   border-bottom: 1px solid @base-color--lighten;
+
+  cursor: pointer;
+}
+
+.about-us__email:hover {
+  color: @base-color--lighten;
+}
+
+.about-us__email:active {
+  opacity: .3;
 }
 
 .about-us__map {
   width: 320px;
+  height: 457px;
   margin: 0 auto;
-  margin-bottom: 34px;
+  margin-bottom: 40px;
+  background-color: @grey--light;
+  background-image: url('../img/map-mobile@1x.jpg');
+  background-size: cover;
 }
+
 
 .about-us__btn {
   width: 225px;
@@ -41,12 +56,12 @@
 @media @tablet-widths {
   .about-us__wrapper {
     h2 {
-      padding-top: 70px;
+      padding-top: 38px;
       padding-bottom: 23px;
     }
   }
   .about-us__title {
-    background-image: url('../../img/icon-flag.svg');
+    background-image: url('../img/icon-flag.svg');
     background-repeat: no-repeat;
     background-position: 100% 90%;
     background-size: 49px 82px;
@@ -69,8 +84,11 @@
   }
   .about-us__map {
     width: 768px;
+    height: 442px;
     margin: 0 auto;
+    margin-bottom: 55px;
     padding-bottom: 15px;
+    background-image: url('../img/map-tablet@1x.jpg');
   }
   .about-us__btn {
     padding-left: 0;
@@ -82,10 +100,15 @@
   .about-us {
     position: relative;
     padding-bottom: 55px;
+    .bg-zigzag-line {
+      width: 100%;
+      height: 17px;
+      fill: @bg-color--promo;
+    }
   }
   .about-us__wrapper {
     h2 {
-      padding-top: 110px;
+      padding-top: 79px;
       padding-left: 175px;
     }
   }
@@ -100,10 +123,11 @@
     background-position: 6% 94%;
   }
   .about-us__map {
-    width: auto;
+    width: 525px;
     position: absolute;
-    top: 40px;
+    top: 9px;
     right: 196px;
+    background-image: url('../img/map-desktop@1x.jpg');
   }
   .about-us__btn-wrapper {
     .container();

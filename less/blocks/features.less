@@ -1,6 +1,9 @@
 .features {
   .container();
   margin-bottom: 32px;
+  h2 {
+    padding-top: 0;
+  }
 }
 
 .features__list {
@@ -12,35 +15,52 @@
 }
 
 .features__item {
-  padding-top: 83px;
+  position: relative;
+  padding-top: 86px;
 
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
-  &--eco {
-    background-image: url(../img/icon-feature-1.svg);
+  .icon-feature-1 {
+    width: 35px;
+    height: 39px;
   }
-  &--style {
-    background-image: url(../img/icon-feature-3.svg);
+  .icon-feature-2 {
+    width: 38px;
+    height: 38px;
   }
-  &--likes {
-    background-image: url(../img/icon-feature-5.svg);
+  .icon-feature-3 {
+    width: 45px;
+    height: 30px;
   }
-  &--handmade {
-    background-image: url(../img/icon-feature-2.svg);
+  .icon-feature-4 {
+    width: 55px;
+    height: 29px;
   }
-  &--support {
-    background-image: url(../img/icon-feature-4.svg);
+  .icon-feature-5 {
+    width: 35px;
+    height: 28px;
   }
-  &--packed {
-    background-image: url(../img/icon-feature-6.svg);
+  .icon-feature-6 {
+    width: 37px;
+    height: 35px;
   }
-
-  background-repeat: no-repeat;
-  background-position: left 37%;
 }
 
+.features__item [class^="icon-feature-"] {
+    position: absolute;
+    top: 29px;
+    left: 2px;
+
+    fill: @base-color--lighten;
+  }
+
 @media @tablet-widths {
+  .features {
+    h2 {
+      padding-top: 33px;
+    }
+  }
   .features__list {
     flex-direction: row;
     flex-wrap: wrap;

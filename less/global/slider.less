@@ -2,26 +2,35 @@
   display: flex;
   padding-top: 29px;
   padding-bottom: 38px;
+  a:hover .icon-left-arrow,
+  a:hover .icon-right-arrow {
+    fill: @logo-hover;
+  }
+  a:focus .icon-left-arrow,
+  a:focus .icon-right-arrow {
+    fill: @logo-focus;
+  }
 }
 
 .slider__toggle {
   display: block;
   width: 130px;
-  padding: 12px;
 
   font-size: 0;
-  border: 2px solid #ececec;
-
-  &--left {
-    background-image: url('../img/icon-left-arrow.svg');
-    border-right: 0;
+  .icon-left-arrow,
+  .icon-right-arrow {
+    width: 55px;
+    height: 27px;
   }
+  &--left,
   &--right {
-    background-image: url('../img/icon-right-arrow.svg');
+    border: 2px solid #ececec;
+    padding-top: 10px;
+    padding-left: 35px;
   }
-
-  background-repeat: no-repeat;
-  background-position: center;
+  &--left {
+    border-right: none;
+  }
 }
 
 @media @tablet-widths {
@@ -30,10 +39,12 @@
 
     border: none;
     &--left {
-      padding-right: 40px;
+      padding-right: 15px;
+      padding-top: 17px;
     }
     &--right {
       padding-right: 39px;
+      padding-top: 17px;
     }
   }
 }
