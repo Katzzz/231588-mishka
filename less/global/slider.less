@@ -2,14 +2,16 @@
   display: flex;
   padding-top: 29px;
   padding-bottom: 38px;
-  a:hover .icon-left-arrow,
-  a:hover .icon-right-arrow {
-    fill: @logo-hover;
-  }
-  a:focus .icon-left-arrow,
-  a:focus .icon-right-arrow {
-    fill: @logo-focus;
-  }
+}
+
+.slider__toggles a:hover .slider__left-arrow,
+.slider__toggles a:hover .slider__right-arrow {
+  fill: @logo-hover;
+}
+
+.slider__toggles a:focus .slider__left-arrow,
+.slider__toggles a:focus .slider__right-arrow {
+  fill: @logo-focus;
 }
 
 .slider__toggle {
@@ -17,11 +19,6 @@
   width: 130px;
 
   font-size: 0;
-  .icon-left-arrow,
-  .icon-right-arrow {
-    width: 55px;
-    height: 27px;
-  }
   &--left,
   &--right {
     border: 2px solid #ececec;
@@ -31,6 +28,12 @@
   &--left {
     border-right: none;
   }
+}
+
+.slider__left-arrow,
+.slider__right-arrow {
+  width: 55px;
+  height: 27px;
 }
 
 @media @tablet-widths {

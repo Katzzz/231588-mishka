@@ -25,11 +25,12 @@
     <header class="page-header">
       <div class="page-header__top">
         <nav class="main-nav main-nav--closed main-nav--nojs">
+          <!--ПОДСКАЖИТЕ,ПОЖАЛУЙСТА, КАКОЙ ИМЕННО БЛОК НАРУШАЕТ КРИТЕРИЙ Д2. ПАРУ ЛИШНИХ ДИВОВ НАШЛА.-->
           <div class="page-header__logo">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg" width="155" height="71">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="125" height="45">
-              <img src="img/logo-mobile.svg" width="90" height="40" alt="Мишка">
+              <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" alt="Мишка">
             </picture>
           </div>
           <button type="button" class="main-nav__hamburger-box">Меню</button>
@@ -132,6 +133,10 @@
           </div>
         </div>
 
+        <svg class="goods__zigzag" width="100%" height="7">
+          <use xlink:href="#bg-zigzag-line"></use>
+        </svg>
+
       </section>
 
       <section class="features">
@@ -191,13 +196,13 @@
             </div>
             <div class="reviews__slider slider__toggles">
               <a href="#" class="slider__toggle slider__toggle--left">
-                <svg class="icon-left-arrow" width="55" height="27">
+                <svg class="slider__icon-left-arrow" width="55" height="27">
                   <use xlink:href="#icon-left-arrow"></use>
                 </svg>
                 Влево
               </a>
               <a href="#" class="slider__toggle slider__toggle--right">
-                <svg class="icon-right-arrow" width="55" height="27">
+                <svg class="slider__icon-right-arrow" width="55" height="27">
                   <use xlink:href="#icon-right-arrow"></use>
                 </svg>
                 Вправо
@@ -206,6 +211,10 @@
             <a href="reviews.html" class="reviews__btn btn">Написать</a>
           </div>
         </div>
+
+        <svg class="reviews__zigzag" width="100%" height="7">
+          <use xlink:href="#bg-zigzag-line"></use>
+        </svg>
 
       </section>
 
@@ -246,32 +255,30 @@
         </div>
         <div class="page-footer__social">
           <a href="#" class="social-link social-link--instagram">
-            <svg class="icon-insta" width="22" height="22">
+            <svg class="social-link__icon-insta" width="22" height="22">
               <use xlink:href="#icon-insta"></use>
             </svg>
             <span>Мы в Инстаграм</span>
           </a>
           <a href="#" class="social-link social-link--facebook">
-            <svg class="icon-fb" width="15" height="30">
+            <svg class="social-link__icon-fb" width="15" height="30">
               <use xlink:href="#icon-fb"></use>
             </svg>
             Мы в Фейсбук
           </a>
           <a href="#" class="social-link social-link--twitter">
-            <svg class="icon-twitter" width="25" height="25">
+            <svg class="social-link__icon-twitter" width="25" height="25">
               <use xlink:href="#icon-twitter"></use>
             </svg>
             Мы в Твиттер
           </a>
         </div>
-        <div class="page-footer__copyright">
-          <a href="https://htmlacademy.ru/intensive/adaptive">
-            <span>Разработано</span>
-            <svg class="page-footer__logo-htmlacademy" width="30" heigth="35">
-              <use xlink:href="#logo-htmlacademy"></use>
-            </svg>
-          </a>
-        </div>
+        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <span>Разработано</span>
+          <svg class="page-footer__logo-htmlacademy" width="30" heigth="35">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
+        </a>
       </div>
     </footer>
 
