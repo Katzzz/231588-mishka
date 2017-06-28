@@ -19,6 +19,7 @@
     "grunt-svgmin": "^4.0.0",
     "grunt-svgstore": "^1.0.0",
     "load-grunt-tasks": "^3.5.2",
+    "normalize.css": "^7.0.0",
     "svg4everybody": "^2.1.8"
   },
   "scripts": {

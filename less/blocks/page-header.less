@@ -75,27 +75,29 @@
 
 .page-header__list li {
   position: relative;
-  &:first-child {
-    background-color: @base-color-lighten;
-  }
-  &:first-child:hover {
-    background-color: @left-btn-hover;
-  }
-  &:first-child:active a,
-  &:first-child:active svg {
-    opacity: .3;
-  }
-  &:last-child {
-    background-color: @base-color-darken;
-  }
-  &:last-child:hover {
-    background-color: @right-btn-hover;
-  }
-  &:last-child:active a,
-  &:last-child:active svg {
-    opacity: .3;
-  }
 }
+.page-header__list li:first-child {
+  background-color: @base-color-lighten;
+}
+
+.page-header__list li:first-child:hover {
+  background-color: @left-btn-hover;
+}
+.page-header__list li:first-child:active a,
+.page-header__list li:first-child:active svg {
+  opacity: .3;
+}
+.page-header__list li:last-child {
+    background-color: @base-color-darken;
+}
+.page-header__list li:last-child:hover {
+  background-color: @right-btn-hover;
+}
+.page-header__list li:last-child:active a,
+.page-header__list li:last-child:active svg {
+  opacity: .3;
+}
+
 .page-header__icon-interior,
 .page-header__icon-toy {
   position: absolute;
@@ -133,11 +135,24 @@
   .page-header__main {
     position: relative;
     z-index: 2;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      bottom: -13px;
+      left: 0;
+      z-index: 20;
+
+      background-image: url('../img/bg-zigzag-fill.svg');
+      background-repeat: repeat-x;
+      background-size: 768px 24px;
+    }
   }
   .page-header__promo {
     position: relative;
     z-index: 9;
-    height: 734px;
+    height: 745px;
     margin-top: -42px;
 
     background-size: cover;
@@ -153,7 +168,7 @@
   .page-header__nav {
     position: relative;
     z-index: 10;
-    margin-top: -108px;
+    margin-top: -117px;
   }
   .page-header__list {
     .container();
@@ -164,19 +179,19 @@
     a {
       padding-left: 36px;
       padding-right: 36px;
-      padding-bottom: 20px;
+      padding-bottom: 29px;
 
       font-size: 20px;
       line-height: 30px;
     }
   }
+  .page-header__icon-interior,
+  .page-header__icon-toy {
+    top: 31px;
+    right: 35px;
+  }
 }
 
-.page-header__icon-interior,
-.page-header__icon-toy {
-  top: 31px;
-  right: 35px;
-}
 
 @media @desktop-widths {
   .page-header__promo {
@@ -200,6 +215,14 @@
     }
     &--toys {
       background-position: 93% 63%
+    }
+  }
+  .page-header__main {
+    &::after {
+      height: 34px;
+      bottom: -19px;
+
+      background-size: 1150px 34px;
     }
   }
 }

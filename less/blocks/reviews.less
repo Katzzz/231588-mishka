@@ -1,11 +1,6 @@
 .reviews__wrapper {
   .container();
-  margin-bottom: 40px;
-}
-
-.reviews__zigzag {
-  fill: @grey-lighten;
-  margin-bottom: 19px;
+  margin-bottom: 72px;
 }
 
 .reviews__description {
@@ -32,13 +27,13 @@
 }
 
 @media @tablet-widths {
-  .reviews__zigzag {
-    display: none;
-  }
   .reviews {
     padding-bottom: 57px;
     margin-bottom: 76px;
-
+// В данном блоке намеренно не задала цвет, так как если задать цвет фона, он задасться всему блоку,
+// в то вреям как картинка занимаем только часть блока. Если же картинка не загрузится, то это никак не повлияет
+// на отображение всего блока в целом. Ведь фон нужно задавать, чтобы пока картинка загружается, блок был наиболее
+// схож с макетом, верно ли?
     background-image: url(../img/review@1x.jpg);
     background-repeat: no-repeat;
     background-position: left center;
